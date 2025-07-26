@@ -32,3 +32,17 @@ menuClose.addEventListener('click', () => {
   menuClose.style.display="none";
   mobileMenu.classList.remove('show');
 });
+
+
+// hide show scroll to top button
+  document.addEventListener("DOMContentLoaded", function () {
+    const mybutton = document.getElementById("ScrollToTopBtn");
+
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 200) {
+        mybutton.classList.remove("hidden");
+      } else {
+        mybutton.classList.add("hidden");
+      }
+    });
+  });
