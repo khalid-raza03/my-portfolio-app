@@ -10,6 +10,30 @@ html {
   scroll-behavior: smooth;
 }
 
+.mobile-nav{
+  z-index: 999;
+  transition: all 2s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.mobile-nav.hide {
+  visibility: hidden;
+  opacity: 0;
+  transform: translate(-7rem, -7rem) ;
+}
+
+.navbar-toggler{
+  z-index: 999;
+}
+
+.mobile-nav.show{
+  visibility: visible;
+  opacity: 1;
+    transform: translate(0rem, 0rem) ;
+}
+
+#navbar-close{
+  display: none;
+}
 
 
 
@@ -44,6 +68,7 @@ background-image: url("https://www.transparenttextures.com/patterns/random-grey-
 
 .fade-text {
   position: absolute;
+  top: 30%;
   opacity: 0;
   animation: fadeLoop 12s infinite;
 }

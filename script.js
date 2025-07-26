@@ -15,6 +15,20 @@
   });
 
  
+// mobile menu toggle
 
+const menuOpen = document.querySelector('.fa-bars');
+const menuClose = document.querySelector('#navbar-close');
+const mobileMenu = document.querySelector('.mobile-nav');
 
+menuOpen.addEventListener('click', () => {
+  menuOpen.style.display="none";
+  menuClose.style.display="inline";
+  mobileMenu.classList.add('show');
+});
 
+menuClose.addEventListener('click', () => {
+  menuOpen.style.display="inline";
+  menuClose.style.display="none";
+  mobileMenu.classList.remove('show');
+});
