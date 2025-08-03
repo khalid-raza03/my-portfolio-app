@@ -51,7 +51,7 @@ html {
 
 
 @media (min-width: 768px) {
-  .my-pic-cover{
+.my-pic-cover{
   transition: transform 0.8s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 .my-img-box:hover .my-pic-cover{
@@ -66,9 +66,6 @@ html {
   opacity:0.85;
 }
 }
-
-
-
 
 
 
