@@ -1,92 +1,130 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio App</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Khalid Raja - Frontend Developer and Designer Portfolio">
+  <title>Khalid Raja - Frontend Developer Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <link rel="stylesheet" href="./styles.css">
-
 </head>
 
-<body>
-  <a id="ScrollToTopBtn" title="Go to top" href="#home"
-    class="fixed bottom-6 right-6  text-blue-600 bg-white border border-blue-600 hover:bg-blue-600 hover:text-white px-3 py-2 rounded-full shadow transition-all duration-300 z-50">
-    <i class="fa-solid fa-angle-up text-xl"></i>
+<body >
+  <!-- Skip to main content link for screen readers -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <a id="scroll-to-top"
+    class="scroll-to-top fixed bottom-6 right-6 text-blue-600 bg-white border border-blue-600 hover:bg-blue-600 hover:text-white px-3 py-2 rounded-full shadow transition-all duration-300 z-50"
+    href="#home" aria-label="Scroll to top of page" tabindex="0">
+    <i class="fa-solid fa-angle-up text-xl" aria-hidden="true"></i>
   </a>
 
-  <header class="shadow-lg shadow-[#7676f0cd] w-full  sticky top-0 bg-white" style="z-index: 999;">
+  <header  class="bg-white header shadow-lg w-full sticky top-0 " style="z-index: 999;">
+    <!-- mobile menu -->
     <div
-      class="absolute -left-1/5 -top-1/3 mobile-nav sm:hidden h-96 w-96 rounded-full bg-blue-600/75 flex items-center justify-center hide">
-      <div class="flex flex-col gap-4">
-        <a href="#home"
-          class="text-lg  font-semibold text-blue-600 bg-white px-5 py-2 rounded-full hover:scale-95 transition-all duration-300">Home</a>
-        <a href="#about"
-          class="text-lg  font-semibold text-blue-600 bg-white px-5 py-2 rounded-full hover:scale-95 transition-all duration-300 ">About</a>
-        <a href="#skills"
-          class="text-lg  font-semibold text-blue-600 bg-white px-5 py-2 rounded-full hover:scale-95 transition-all duration-300">SKills</a>
-        <a href="#projects"
-          class="text-lg  font-semibold text-blue-600 bg-white px-5 py-2 rounded-full hover:scale-95 transition-all duration-300">Projects</a>
-        <a href="#contacts"
-          class="text-lg  font-semibold text-blue-600 bg-white px-5 py-2 rounded-full hover:scale-95 transition-all duration-300">Contact</a>
-      </div>
+      class="header__mobile-menu absolute -left-1/5 -top-1/3 sm:hidden h-96 w-96 rounded-full bg-blue-600/75 flex items-center justify-center"
+      id="mobile-menu" aria-hidden="true">
+      <ul class="header__mobile-list flex flex-col gap-4" role="list">
+        <li class="header__mobile-item">
+          <a href="#home"
+            class="header__mobile-link text-lg font-semibold text-blue-600 bg-white px-5 py-2 rounded-full hover:scale-95 transition-all duration-300 ">Home</a>
+        </li>
+        <li class="header__mobile-item">
+          <a href="#about"
+            class="header__mobile-link text-lg font-semibold text-blue-600 bg-white px-5 py-2 rounded-full hover:scale-95 transition-all duration-300 ">About</a>
+        </li>
+        <li class="header__mobile-item">
+          <a href="#skills"
+            class="header__mobile-link text-lg font-semibold text-blue-600 bg-white px-5 py-2 rounded-full hover:scale-95 transition-all duration-300">Skills</a>
+        </li>
+        <li class="header__mobile-item">
+          <a href="#projects"
+            class="header__mobile-link text-lg font-semibold text-blue-600 bg-white px-5 py-2 rounded-full hover:scale-95 transition-all duration-300 ">Projects</a>
+        </li>
+        <li class="header__mobile-item">
+          <a href="#contacts"
+            class="header__mobile-link text-lg font-semibold text-blue-600 bg-white px-5 py-2 rounded-full hover:scale-95 transition-all duration-300 ">Contact</a>
+        </li>
+      </ul>
     </div>
 
-    <nav>
-      <div class="container mx-auto ">
-        <div class="flex justify-between sm:justify-around items-center relative overflow-hidden py-10 px-4 sm:px-0">
+    <nav class="header__nav" role="navigation" aria-label="Main navigation">
+      <div class="header__container container mx-auto">
+        <div
+          class="header__wrapper flex  lg:justify-around justify-between  items-center relative overflow-hidden py-10 px-4 sm:px-0">
           <span
-            class="animate__animated animate__bounce  absolute h-40 w-40 rounded-full bg-blue-800 opacity-35 p-5 left-3 top-12 sm:top-6 "></span>
-          <span class="absolute h-40 w-40 rotate-[135deg] bg-blue-800 opacity-55 p-5 -right-7 sm:right-0 top-20"></span>
+            class="header__decoration header__decoration--circle-1 animate__animated animate__bounce absolute h-40 w-40 rounded-full bg-blue-800 opacity-35 p-5 left-3 top-12 sm:top-6 invisible sm:visible"
+            aria-hidden="true"></span>
           <span
-            class="animate__animated animate__bounce  absolute h-96 w-96 rounded-full bg-blue-800 opacity-40 p-5 left-5 sm:left-1/4 bottom-5"></span>
-          <a href="#" class="nav-logo">
-            <h1 class="fade-text text-xl md:text-2xl lg:text-4xl font-extrabold font-bubblegum">
+            class="header__decoration header__decoration--circle-2 absolute h-40 w-40 rotate-[135deg] bg-blue-800 opacity-55 p-5 -right-7 sm:right-0 top-20 invisible sm:visible"
+            aria-hidden="true"></span>
+          <span
+            class="header__decoration header__decoration--circle-3 animate__animated animate__bounce absolute h-96 w-96 rounded-full bg-blue-800 opacity-40 p-5 left-5 sm:left-1/4 bottom-5 invisible sm:visible"
+            aria-hidden="true"></span>
+
+          <div class="header__logo">
+            <h1 class="header__title fade-text text-xl md:text-2xl lg:text-4xl font-extrabold font-bubblegum">
               Khalid Raja
             </h1>
-            <span class="fade-text text-2xl md:text-3xl lg:text-4xl font-extrabold font-bubblegum text-blue-800">I'm
-              Designer</span>
-            <span class="fade-text text-2xl md:text-3xl lg:text-4xl font-extrabold font-bubblegum text-blue-800">I'm
-              Developer</span>
-            <span class="fade-text text-2xl md:text-3xl lg:text-4xl font-extrabold font-bubblegum text-blue-800">I'm
-              Freelancer</span>
-          </a>
-
-          <div class="navbar-toggler sm:hidden block p-2 ">
-            <span id="navbar-open">
-              <i class="fa-solid fa-bars text-blue-900 text-2xl "></i>
-            </span>
-            <span id="navbar-close">
-              <i class="fa-solid fa-xmark text-blue-900 text-2xl "></i>
-            </span>
+            <div class="header__subtitle-wrapper" aria-label="Professional roles">
+              <span
+                class="header__subtitle fade-text text-2xl md:text-3xl lg:text-4xl font-extrabold font-bubblegum text-blue-800 text">I'm
+                Designer</span>
+              <span
+                class="header__subtitle fade-text text-2xl md:text-3xl lg:text-4xl font-extrabold font-bubblegum text-blue-800 text">I'm
+                Developer</span>
+              <span
+                class="header__subtitle fade-text text-2xl md:text-3xl lg:text-4xl font-extrabold font-bubblegum text-blue-800 text">I'm
+                Freelancer</span>
+            </div>
           </div>
 
-          <ul class=" gap-x-8 hidden sm:flex">
-            <li>
-              <a href="#home" class="text-md md:text-xl nav-link font-semibold text-blue-800">Home</a>
+          
+          <div class="theme-selection ms-36">
+            <button id="theme-toggle" aria-label="Toggle dark mode" class="w-12 h-12 px-4 py-2 inline-flex items-center relative z-50 border border-yellow-500  rounded-full transition-all duration-300 ease-in-out" >
+              <i class="fa-solid fa-moon  text-2xl text-start absolute right-2 top-1/4" aria-hidden="true" style="color: #ffffff;"></i>
+              <i class="absolute fa-solid  fa-sun text-yellow-500 text-2xl text-start left-2 top-1/4" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <button class="header__menu-toggle md:hidden block p-2" id="menu-toggle" aria-expanded="false"
+            aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+            <span class="header__menu-icon header__menu-icon--open" id="menu-open">
+              <i class="fa-solid fa-bars text-blue-900 text-2xl" aria-hidden="true"></i>
+            </span>
+            <span class="header__menu-icon header__menu-icon--close" id="menu-close" style="display: none;">
+              <i class="fa-solid fa-xmark text-blue-900 text-2xl" aria-hidden="true"></i>
+            </span>
+          </button>
+
+          <ul class="header__nav-list gap-x-8 hidden md:flex" role="list">
+            <li class="header__nav-item">
+              <a href="#home" class="header__nav-link nav-link text-md md:text-xl font-semibold text-blue-800 text"
+                aria-current="page">Home</a>
             </li>
-            <li>
-              <a href="#about" class="text-md md:text-xl  nav-link font-semibold text-blue-800">About</a>
+            <li class="header__nav-item">
+              <a href="#about" class="header__nav-link nav-link text-md md:text-xl font-semibold text-blue-800 text">About</a>
             </li>
-            <li>
-              <a href="#skills" class="text-md md:text-xl  nav-link font-semibold text-blue-800">Skills</a>
+            <li class="header__nav-item">
+              <a href="#skills" class="header__nav-link nav-link text-md md:text-xl font-semibold text-blue-800 text">Skills</a>
             </li>
-            <li>
-              <a href="#projects" class="text-md md:text-xl  nav-link font-semibold text-blue-800">Projects</a>
+            <li class="header__nav-item">
+              <a href="#projects" class="header__nav-link nav-link text-md md:text-xl font-semibold text-blue-800 text">Projects</a>
             </li>
-            <li>
-              <a href="#contacts" class="text-md md:text-xl  nav-link font-semibold text-blue-800">Contact</a>
+            <li class="header__nav-item">
+              <a href="#contacts" class="header__nav-link nav-link text-md md:text-xl font-semibold text-blue-800 text">Contact</a>
             </li>
           </ul>
+
         </div>
+        
       </div>
     </nav>
   </header>
 
-  <div class="portfolio-wrapper ">
-    <section id="home" class=" hero-section relative py-20  ">
+  <main id="main-content" class="portfolio">
+    <section id="home" class="hero-section  relative py-20" aria-labelledby="hero-heading">
       <span
         class="circle-1 hidden lg:block absolute h-32 w-32 rounded-full  bg-blue-200 z-20 p-5 left-28 top-30"></span>
       <span
@@ -94,18 +132,18 @@
       <span
         class="circle-3 hidden lg:block absolute h-20 w-20 rounded-full  bg-blue-500 z-20 p-5 opacity-35 left-24 top-20"></span>
       <div class="container mx-auto p-10 mt-5">
-        <div class="hero-section-wrapper flex justify-around lg:flex-row flex-col-reverse gap-10 items-center">
+        <div class="hero-section-wrapper flex justify-around lg:flex-row flex-col-reverse gap-5 sm:gap-10 items-center">
           <div class="left flex flex-col gap-5 justify-center">
-            <p class="text-4xl font-semibold text-blue-800 font-bubblegum">
+            <p class="text-2xl sm:text-4xl font-semibold text-blue-800 font-bubblegum">
               I am
             </p>
-            <p class="text-6xl font-bold text-blue-600 font-bubblegum">
+            <p class="text-3xl sm:text-6xl font-bold text-blue-600 font-bubblegum">
               Khalid Raja
             </p>
-            <p class="text-xl font-semibold italic text-blue-800 font-bubblegum">
+            <p class="text-lg sm:text-xl font-semibold italic text-blue-800 font-bubblegum">
               A frontend developer and designer
             </p>
-            <a target="_blank" href="#contact"
+            <a  href="#contacts"
               class="bg-gradient-to-bl from-white to-blue-600 hover:from-white hover:to-white hover:text-blue-600 hover:border-blue-600 text-center font-bold px-6 py-3 rounded-lg shadow-md border-2  transition-all duration-300 text-white text-xl">Contact
               me</a>
           </div>
@@ -119,7 +157,8 @@
               class="my-pic-cover hidden sm:block absolute h-10 w-full -z-10 bg-blue-600 opacity-55 rotate-45 -right-32 top-24 move45-3"></span>
             <span
               class="my-pic-cover hidden sm:block absolute h-10 w-full -z-10 bg-blue-600 opacity-55 -rotate-45 -right-32 bottom-20 move45-4"></span>
-            <img src="./images/my-formal-pic.jpg" class="my-pic relative z-10  object-cover rounded-3xl" alt="my-pic" />
+            <img src="./images/my-formal-pic.jpg" class="hero__image relative z-10 object-cover rounded-3xl"
+              alt="Khalid Raja - Frontend Developer and Designer professional photo">
           </div>
 
         </div>
@@ -136,11 +175,12 @@
       </div>
     </section>
 
-    <section id="about" class=" about-section py-20 bg-gradient-to-tl from-blue-200 to-blue-500  ">
-      <div class="container mx-auto p-10">
-        <h3 class=" text-3xl  md:text-4xl lg:text-5xl font-bold text-white text-center mb-8">
+    <section id="about" class="section about py-20 " aria-labelledby="about-heading">
+      <div class="about__container container mx-auto p-10">
+        <h2 id="about-heading"
+          class="about__title text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-8">
           About Me
-        </h3>
+        </h2>
         <div class="flex justify-around gap-10 lg:flex-row flex-col-reverse items-center ">
           <div class="flex flex-col gap-2">
             <p class="text-lg text-white text-justify mb-3 max-w-xl font-serif tracking-wider italic animate__animated  animate-on-scroll "
@@ -160,9 +200,9 @@
 
             </p>
 
-            <p class="text-lg font-medium text-white">Age: 21</p>
+            <p class="text-lg font-medium text-white">Age: 23</p>
             <p class="text-lg font-medium text-white">
-              Location: Rajasthan, India
+              Location: West Bengal, India
             </p>
             <p class="text-lg font-medium text-white">
               Email: Khalidraza30565@gmail.com
@@ -181,7 +221,7 @@
       </div>
     </section>
 
-    <section id="skills" class=" my-skills py-20 bg-blue-100  ">
+    <section id="skills" class="section my-skills py-20 bg-blue-100  ">
       <h3 class="text-3xl  md:text-4xl lg:text-5xl font-bold text-blue-800 text-center mb-8 ">
         Skills
       </h3>
@@ -202,7 +242,7 @@
             </p>
           </div>
           <div
-            class="skill-box  flex flex-col items-center gap-4 bg-blue-300 py-4 rounded-lg animate__animated  animate-on-scroll"
+            class="skill-box   flex flex-col items-center gap-4 bg-blue-300 py-4 rounded-lg animate__animated  animate-on-scroll"
             data-animate="animate__fadeInUp">
             <img src="./images/css-img.png" alt class="object-cover rounded-2xl aspect-[1/1]" />
             <p class="skill-name text-lg font-medium text-blue-800">css</p>
@@ -282,7 +322,7 @@
       </div>
     </section>
 
-    <section id="projects" class=" projects py-20 bg-gradient-to-tl from-blue-200 to-blue-500  ">
+    <section id="projects" class="section projects py-20 bg-gradient-to-tl from-blue-200 to-blue-500  ">
       <h3 class="text-3xl  md:text-4xl lg:text-5xl font-bold text-white text-center mb-8 ">
         Projects
       </h3>
@@ -482,7 +522,8 @@
             <div class="info-box flex justify-between gap-4 items-center">
               <a
                 href="https://mail.google.com/mail/?view=cm&to=khalidraza30565@gmail.com&su=Query Request&body=Hello,%0AI would like to connect with you.%0APlease let me know your availability.%0A%0ARegards,%0A[[Your Name]">
-                <i class="fa-solid fa-envelope text-blue-600 text-xl border border-blue-600 py-4 px-5 rounded-full cursor-pointer hover:scale-90 transition-transform duration-300"></i>
+                <i
+                  class="fa-solid fa-envelope text-blue-600 text-xl border border-blue-600 py-4 px-5 rounded-full cursor-pointer hover:scale-90 transition-transform duration-300"></i>
               </a>
               <div>
                 <h5 class="text-lg font-bold text-blue-800 ">Email</h5>
@@ -490,16 +531,18 @@
               </div>
             </div>
             <div class="info-box flex justify-between gap-4 items-center">
-             <a href="tel:+919563751684"> <i
-                class="fa-solid fa-phone-alt text-blue-600 text-xl border border-blue-600 py-4 px-5 rounded-full cursor-pointer hover:scale-90 transition-transform duration-300"></i></a>
+              <a href="tel:+919563751684"> <i
+                  class="fa-solid fa-phone-alt text-blue-600 text-xl border border-blue-600 py-4 px-5 rounded-full cursor-pointer hover:scale-90 transition-transform duration-300"></i></a>
               <div>
                 <h5 class="text-lg font-bold text-blue-800">Phone</h5>
                 <p>+91 9563751684</p>
               </div>
             </div>
             <div class="info-box flex justify-between gap-4 items-center">
-             <a href="https://www.google.com/maps/place/Jaipur,+Rajasthan/@26.8854214,75.6257446,11z/data=!3m1!4b1!4m6!3m5!1s0x396c4adf4c57e281:0xce1c63a0cf22e09!8m2!3d26.9124336!4d75.7872709!16zL20vMDE2NzIy?authuser=0&entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"> <i
-                class="fa-solid fa-map-marker-alt text-blue-600 text-xl border border-blue-600 py-4 px-5 rounded-full cursor-pointer hover:scale-90 transition-transform duration-300"></i></a>
+              <a
+                href="https://www.google.com/maps/place/Jaipur,+Rajasthan/@26.8854214,75.6257446,11z/data=!3m1!4b1!4m6!3m5!1s0x396c4adf4c57e281:0xce1c63a0cf22e09!8m2!3d26.9124336!4d75.7872709!16zL20vMDE2NzIy?authuser=0&entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D">
+                <i
+                  class="fa-solid fa-map-marker-alt text-blue-600 text-xl border border-blue-600 py-4 px-5 rounded-full cursor-pointer hover:scale-90 transition-transform duration-300"></i></a>
               <div>
                 <h5 class="text-lg font-bold text-blue-800">Address</h5>
                 <p>Jaipur, Rajasthan</p>
@@ -523,7 +566,7 @@
           </div>
           <div class="contact-form flex flex-col gap-4 ">
             <form class="flex flex-col gap-2">
-              <label for="name" class="text-xl font-bold text-blue-600">
+              <label for="name" class="text-xl font-bold text-blue-600 text">
                 Name
               </label>
               <input type="text" id="name"
@@ -531,7 +574,7 @@
                 required />
             </form>
             <form class="flex flex-col gap-2">
-              <label for="email" class="text-lg font-bold text-blue-600">
+              <label for="email" class="text-lg font-bold text-blue-600 text">
                 Email
               </label>
               <input type="email" id="email"
@@ -539,7 +582,7 @@
                 required />
             </form>
             <form class="flex flex-col gap-2">
-              <label for="message" class="text-lg font-bold text-blue-600">
+              <label for="message" class="text-lg font-bold text-blue-600 text">
                 Message
               </label>
               <textarea id="message"
@@ -556,7 +599,7 @@
 
     </section>
 
-  </div>
+  </main>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <script src="./script.js"></script>
 </body>
