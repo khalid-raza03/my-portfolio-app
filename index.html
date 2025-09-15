@@ -11,21 +11,27 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 
-<body >
-  <!-- Skip to main content link for screen readers -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
+<body class="body_dark">
+  <div id="preloader" class="fixed inset-0 bg-gray-900 flex justify-center items-center z-50">
+    <div class="preloader-img"> 
+      <img src="./images/my-formal-pic.jpg" alt="my-formal-pic" height="120" width="120" class="rounded-full">
+    </div>
+  </div>
+  <div id="content" style="display: none;">
+    <!-- Skip to main content link for screen readers -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
   <a id="scroll-to-top"
     class="scroll-to-top fixed bottom-6 right-6 text-blue-600 bg-white border border-blue-600 hover:bg-blue-600 hover:text-white px-3 py-2 rounded-full shadow transition-all duration-300 z-50"
     href="#home" aria-label="Scroll to top of page" tabindex="0">
     <i class="fa-solid fa-angle-up text-xl" aria-hidden="true"></i>
   </a>
 
-  <header  class="bg-white header shadow-lg w-full sticky top-0 " style="z-index: 999;">
+  <header class="header header_dark shadow-lg w-full sticky top-0" style="z-index: 999; background-color: #fff;">
     <!-- mobile menu -->
     <div
-      class="header__mobile-menu absolute -left-1/5 -top-1/3 sm:hidden h-96 w-96 rounded-full bg-blue-600/75 flex items-center justify-center"
+      class="header__mobile-menu absolute -left-1/4 -top-1/3 sm:hidden h-96 w-96 rounded-full bg-blue-600/75 flex items-center justify-center"
       id="mobile-menu" aria-hidden="true">
-      <ul class="header__mobile-list flex flex-col gap-4" role="list">
+      <ul class="header__mobile-list flex flex-col gap-5" role="list">
         <li class="header__mobile-item">
           <a href="#home"
             class="header__mobile-link text-lg font-semibold text-blue-600 bg-white px-5 py-2 rounded-full hover:scale-95 transition-all duration-300 ">Home</a>
@@ -49,6 +55,7 @@
       </ul>
     </div>
 
+    <!-- desktop navigation -->
     <nav class="header__nav" role="navigation" aria-label="Main navigation">
       <div class="header__container container mx-auto">
         <div
@@ -80,11 +87,14 @@
             </div>
           </div>
 
-          
+
           <div class="theme-selection ms-36">
-            <button id="theme-toggle" aria-label="Toggle dark mode" class="w-12 h-12 px-4 py-2 inline-flex items-center relative z-50 border border-yellow-500  rounded-full transition-all duration-300 ease-in-out" >
-              <i class="fa-solid fa-moon  text-2xl text-start absolute right-2 top-1/4" aria-hidden="true" style="color: #ffffff;"></i>
-              <i class="absolute fa-solid  fa-sun text-yellow-500 text-2xl text-start left-2 top-1/4" aria-hidden="true"></i>
+            <button id="theme-toggle" aria-label="Toggle dark mode"
+              class="w-12 h-12 px-4 py-2 inline-flex items-center relative z-50 border border-yellow-500 bg-blue-600 rounded-full transition-all duration-300 ease-in-out">
+              <i class="fa-solid fa-moon  text-2xl text-start absolute right-2 top-1/4" aria-hidden="true"
+                style="color: #ffffff;"></i>
+              <i class="absolute fa-solid  fa-sun text-yellow-500 text-2xl text-start left-2 top-1/4 invisible"
+                aria-hidden="true"></i>
             </button>
           </div>
 
@@ -104,27 +114,35 @@
                 aria-current="page">Home</a>
             </li>
             <li class="header__nav-item">
-              <a href="#about" class="header__nav-link nav-link text-md md:text-xl font-semibold text-blue-800 text">About</a>
+              <a href="#about"
+                class="header__nav-link nav-link text-md md:text-xl font-semibold text-blue-800 text">About</a>
             </li>
             <li class="header__nav-item">
-              <a href="#skills" class="header__nav-link nav-link text-md md:text-xl font-semibold text-blue-800 text">Skills</a>
+              <a href="#skills"
+                class="header__nav-link nav-link text-md md:text-xl font-semibold text-blue-800 text">Skills</a>
             </li>
             <li class="header__nav-item">
-              <a href="#projects" class="header__nav-link nav-link text-md md:text-xl font-semibold text-blue-800 text">Projects</a>
+              <a href="#projects"
+                class="header__nav-link nav-link text-md md:text-xl font-semibold text-blue-800 text">Projects</a>
             </li>
             <li class="header__nav-item">
-              <a href="#contacts" class="header__nav-link nav-link text-md md:text-xl font-semibold text-blue-800 text">Contact</a>
+              <a href="#contacts"
+                class="header__nav-link nav-link text-md md:text-xl font-semibold text-blue-800 text">Contact</a>
             </li>
           </ul>
 
         </div>
-        
+
       </div>
     </nav>
   </header>
 
+
+
   <main id="main-content" class="portfolio">
-    <section id="home" class="hero-section  relative py-20" aria-labelledby="hero-heading">
+
+    <!-- hero section -->
+    <section id="home" class="hero-section relative py-20" aria-labelledby="hero-heading">
       <span
         class="circle-1 hidden lg:block absolute h-32 w-32 rounded-full  bg-blue-200 z-20 p-5 left-28 top-30"></span>
       <span
@@ -143,7 +161,7 @@
             <p class="text-lg sm:text-xl font-semibold italic text-blue-800 font-bubblegum">
               A frontend developer and designer
             </p>
-            <a  href="#contacts"
+            <a href="#contacts"
               class="bg-gradient-to-bl from-white to-blue-600 hover:from-white hover:to-white hover:text-blue-600 hover:border-blue-600 text-center font-bold px-6 py-3 rounded-lg shadow-md border-2  transition-all duration-300 text-white text-xl">Contact
               me</a>
           </div>
@@ -175,7 +193,8 @@
       </div>
     </section>
 
-    <section id="about" class="section about py-20 " aria-labelledby="about-heading">
+    <!-- about section -->
+    <section id="about" class="section section_dark about py-20 " aria-labelledby="about-heading">
       <div class="about__container container mx-auto p-10">
         <h2 id="about-heading"
           class="about__title text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-8">
@@ -183,8 +202,7 @@
         </h2>
         <div class="flex justify-around gap-10 lg:flex-row flex-col-reverse items-center ">
           <div class="flex flex-col gap-2">
-            <p class="text-lg text-white text-justify mb-3 max-w-xl font-serif tracking-wider italic animate__animated  animate-on-scroll "
-              data-animate="animate__fadeInUp">
+            <p class="text-lg text-white text-justify mb-3 max-w-xl font-serif tracking-wider italic ">
               I’m Khalid Raja, a 23-year-old frontend developer and designer.
               With a deep passion for coding, I’ve dedicated myself to building user-friendly websites and applications
               with creativity and attention to detail. My goal is to help individuals and businesses achieve their
@@ -221,108 +239,124 @@
       </div>
     </section>
 
-    <section id="skills" class="section my-skills py-20 bg-blue-100  ">
+    <!-- skill section -->
+    <section id="skills" class="section section_dark my-skills py-20 bg-blue-100  ">
       <h3 class="text-3xl  md:text-4xl lg:text-5xl font-bold text-blue-800 text-center mb-8 ">
-        Skills
+       Technical Skills
       </h3>
 
       <div class="container mx-auto p-10">
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-3 gap-y-6">
           <div
-            class="skill-box  flex flex-col items-center gap-4 bg-blue-300 py-4 rounded-lg animate__animated  animate-on-scroll"
+            class="skill-box dark  flex flex-col items-center gap-4 bg-white py-4 rounded-lg animate__animated  animate-on-scroll"
             data-animate="animate__fadeInUp">
-            <img src="./images/html.png" alt class="object-cover rounded-2xl aspect-[1/1]" />
-            <p class="skill-name text-lg font-medium text-blue-800">HTML</p>
-            <p class="desc px-8 text-justify ">
-              HTML is the standard markup language for creating web pages.
-              It defines the structure of a webpage by specifying the
-              content of the page, its elements and their attributes. I have
-              a strong foundation in HTML and I'm always learning new skills
-              to stay up-to-date with the latest trends and technologies.
-            </p>
+
+            <p class="skill-head text-xl font-medium text-blue-300">LANGUAGES </p>
+            <div class="skill-item-box flex gap-x-2 gap-y-4 flex-wrap justify-center">
+              <div class="skill-items flex gap-2 px-8 items-center flex-col">
+                <img src="./images/html.png" alt="html-img" height="70" width="70"
+                  class="transition-all duration-300 ease-in-out rounded-full"> <span class="skill-name">HTML5</span>
+              </div>
+
+              <div class="skill-items flex gap-3 px-8 items-center flex-col">
+                <img src="./images/css-img.png" alt="css-img" height="70" width="70"
+                  class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span
+                  class="skill-name">CSS3</span>
+              </div>
+              <div class="skill-items flex gap-3 px-8 items-center flex-col">
+                <img src="./images/js.png" alt="JavaScript-img" height="70" width="70"
+                  class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span class="skill-name">Js
+                  (ES6+)</span>
+              </div>
+              <div class="skill-items flex gap-3 px-8 items-center flex-col">
+                <img src="./images/cpp.png" alt="cpp-img" height="70" width="70"
+                  class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span
+                  class="skill-name">C++</span>
+              </div>
+
+              <div class="skill-items flex gap-3 px-8 items-center flex-col">
+                <img src="./images/python.webp" alt="python-img" height="70" width="70"
+                  class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span
+                  class="skill-name">Python</span>
+              </div>
+            </div>
+
           </div>
           <div
-            class="skill-box   flex flex-col items-center gap-4 bg-blue-300 py-4 rounded-lg animate__animated  animate-on-scroll"
+            class="skill-box dark  flex flex-col items-center gap-4 bg-white py-4 rounded-lg animate__animated  animate-on-scroll"
             data-animate="animate__fadeInUp">
-            <img src="./images/css-img.png" alt class="object-cover rounded-2xl aspect-[1/1]" />
-            <p class="skill-name text-lg font-medium text-blue-800">css</p>
-            <p class="desc px-8 text-justify">
-              CSS is a style sheet language used for describing the
-              presentation of a document written in HTML. It is used to make
-              a webpage look visually appealing and easy to navigate. I have
-              a strong foundation in CSS and I'm always learning new skills
-              to stay up-to-date with the latest trends and technologies.
-            </p>
+
+            <p class="skill-head text-xl font-medium text-blue-300">Frameworks & Libraries </p>
+            <div class="skill-item-box flex gap-x-2 gap-y-4 flex-wrap justify-center">
+              <div class="skill-items flex gap-2 px-8 items-center flex-col">
+                <img src="./images/tailwind-css.jpg" alt="tailwind-css" height="70" width="70"
+                  class="transition-all duration-300 ease-in-out rounded-full"> <span class="skill-name">Tailwind Css</span>
+              </div>
+
+              <div class="skill-items flex gap-3 px-8 items-center flex-col">
+                <img src="./images/bootstrap.jpg" alt="bootstrap" height="70" width="70"
+                  class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span
+                  class="skill-name">Bootstrap Css</span>
+              </div>
+              <div class="skill-items flex gap-3 px-8 items-center flex-col">
+                <img src="./images/react.webp" alt="react-img" height="70" width="70"
+                  class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span class="skill-name">React.js</span>
+              </div>
+              <div class="skill-items flex gap-3 px-8 items-center flex-col">
+                <img src="./images/node.png" alt="node-img" height="70" width="70"
+                  class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span
+                  class="skill-name">Node.js</span>
+              </div>
+
+                <div class="skill-items flex gap-3 px-8 items-center flex-col">
+                <img src="./images/scss.jpg" alt="scss-img" height="70" width="70"
+                  class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span
+                  class="skill-name">Scss</span>
+              </div>
+            </div>
+
           </div>
-          <div
-            class="skill-box  flex flex-col items-center gap-4 bg-blue-300 py-4 rounded-lg animate__animated  animate-on-scroll"
+         <div
+            class="skill-box dark  flex flex-col items-center gap-4 bg-white py-4 rounded-lg animate__animated  animate-on-scroll"
             data-animate="animate__fadeInUp">
-            <img src="./images/js.png" alt class="object-cover rounded-2xl aspect-[1/1]" />
-            <p class="skill-name text-lg font-medium text-blue-800">
-              JavaScript
-            </p>
-            <p class="desc px-8 text-justify">
-              JavaScript is a programming language that adds interactivity
-              to web pages. It allows you to make web pages dynamic and
-              interactive by adding functionality such as event handling,
-              animations, and user interactions. I have a strong foundation
-              in JavaScript and I'm always learning new skills to stay
-              up-to-date with the latest trends and technologies.
-            </p>
+
+            <p class="skill-head text-xl font-medium text-blue-300">Tools & Platforms</p>
+            <div class="skill-item-box flex gap-x-2 gap-y-4 flex-wrap justify-center">
+              <div class="skill-items flex gap-2 px-8 items-center flex-col">
+                <img src="./images/vs-code.jpg" alt="vs-code-img" height="70" width="70"
+                  class="transition-all duration-300 ease-in-out rounded-full"> <span class="skill-name">VS Code</span>
+              </div>
+
+              <div class="skill-items flex gap-3 px-8 items-center flex-col">
+                <img src="./images/figma.avif" alt="figma-img" height="70" width="70"
+                  class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span
+                  class="skill-name">Figma</span>
+              </div>
+              <div class="skill-items flex gap-3 px-8 items-center flex-col">
+                <img src="./images/canva.jpeg" alt="Canva-img" height="70" width="70"
+                  class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span class="skill-name">Canva</span>
+              </div>
+              <div class="skill-items flex gap-3 px-8 items-center flex-col">
+                <img src="./images/git.jpg" alt="git-img" height="70" width="70"
+                  class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span
+                  class="skill-name">Git</span>
+              </div>
+
+                <div class="skill-items flex gap-3 px-8 items-center flex-col">
+                <img src="./images/github.jpg" alt="Github-img" height="70" width="70"
+                  class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span
+                  class="skill-name">Github</span>
+              </div>
+            </div>
+
           </div>
-          <div
-            class="skill-box flex flex-col items-center gap-4 bg-blue-300 py-4 rounded-lg animate__animated  animate-on-scroll"
-            data-animate="animate__fadeInUp">
-            <img src="./images/tailwind.jpg" alt class="object-cover rounded-2xl aspect-[1/1]" />
-            <p class="skill-name text-lg font-medium text-blue-800">
-              Tailwind
-            </p>
-            <p class="desc px-8 text-justify">
-              Tailwind CSS is a utility-first CSS framework that provides a
-              scalable, efficient, and modular way to style your
-              applications. It uses CSS variables, mixins, and functions to
-              make it easy to apply styles across your entire project. I
-              have a strong foundation in Tailwind CSS and I'm always
-              learning new skills to stay up-to-date with the latest trends
-              and technologies.
-            </p>
-          </div>
-          <div
-            class="skill-box flex flex-col items-center gap-4 bg-blue-300 py-4 rounded-lg animate__animated  animate-on-scroll"
-            data-animate="animate__fadeInUp">
-            <img src="./images/react.webp" alt class="object-cover rounded-2xl aspect-[1/1] bg-white p-3" />
-            <p class="skill-name text-lg font-medium text-blue-800">
-              React js
-            </p>
-            <p class="desc px-8 text-justify">
-              React.js is a JavaScript library for building user interfaces.
-              It allows you to create reusable components, manage state, and
-              handle user interactions in a single-page application. I have
-              a strong foundation in React.js and I'm always learning new
-              skills to stay up-to-date with the latest trends and
-              technologies.
-            </p>
-          </div>
-          <div
-            class="skill-box flex flex-col items-center gap-4 bg-blue-300 py-4 rounded-lg animate__animated  animate-on-scroll"
-            data-animate="animate__fadeInUp">
-            <img src="./images/github.jpg" alt class="object-cover rounded-2xl aspect-[1/1]" />
-            <p class="skill-name text-lg font-medium text-blue-800">
-              Git and Git Hub
-            </p>
-            <p class="desc px-8 text-justify">
-              Git and GitHub are essential tools for version control,
-              collaboration, and collaboration with other developers. I have
-              a strong foundation in Git and GitHub and I'm always learning
-              new skills to stay up-to-date with the latest trends and
-              technologies.
-            </p>
-          </div>
+       
         </div>
       </div>
     </section>
 
-    <section id="projects" class="section projects py-20 bg-gradient-to-tl from-blue-200 to-blue-500  ">
+    <!-- project section -->
+    <section id="projects" class="section section_dark projects py-20 bg-gradient-to-tl from-blue-200 to-blue-500  ">
       <h3 class="text-3xl  md:text-4xl lg:text-5xl font-bold text-white text-center mb-8 ">
         Projects
       </h3>
@@ -346,7 +380,7 @@
               <img src="./images/project-1.png" alt class="object-cover aspect-[2/1] w-full h-full" />
             </div>
             <div class="project-info flex flex-col gap-4 w-full items-center rounded-bl-xl rounded-br-xl">
-              <h4 class="text-2xl font-bold text-white text-center">
+              <h4 class="text-lg md:text-2xl font-bold text-white text-center">
                 Shop Elegance
               </h4>
               <button class="visit-btn px-8 py-4 rounded-lg bg-cyan-600 text-white">
@@ -356,7 +390,6 @@
             </div>
           </div>
           <!-- Project Edule -->
-
           <div
             class="project-box p-4 rounded-lg flex flex-col items-center relative animate__animated  animate-on-scroll"
             data-animate="animate__fadeInUp">
@@ -376,8 +409,8 @@
               <img src="./images/project-2.png" alt class="object-cover aspect-[2/1] w-full h-full" />
             </div>
             <div class="project-info flex flex-col gap-4 w-full items-center rounded-bl-xl rounded-br-xl">
-              <h4 class="text-2xl font-bold text-white text-center">
-                Edule
+              <h4 class="text-lg md:text-2xl font-bold text-white text-center">
+                Educational Wesbite template
               </h4>
               <a href="#"
                 class="px-8 py-4 rounded-lg bg-cyan-600 text-white hover:bg-green-400 transition-all duration-300">View
@@ -402,8 +435,8 @@
               <img src="./images/project-3.png" alt class="object-cover aspect-[2/1] w-full h-full" />
             </div>
             <div class="project-info flex flex-col gap-4 w-full items-center rounded-bl-xl rounded-br-xl">
-              <h4 class="text-2xl font-bold text-white text-center">
-                Uglow Clone
+              <h4 class="text-lg md:text-2xl font-bold text-white text-center">
+              Affiliate marketing Webpage
               </h4>
               <a href="#"
                 class="px-8 py-4 rounded-lg bg-cyan-600 text-white hover:bg-green-400 transition-all duration-300">View
@@ -428,8 +461,8 @@
               <img src="./images/project-5.png" alt class="object-cover w-full h-full" />
             </div>
             <div class="project-info flex flex-col gap-4 w-full items-center rounded-bl-xl rounded-br-xl">
-              <h4 class="text-2xl font-bold text-white text-center">
-                Nexcent
+              <h4 class="text-lg md:text-2xl font-bold text-white text-center">
+                Nexcent (Marketing Webpage)
               </h4>
               <a href="#"
                 class="px-8 py-4 rounded-lg bg-cyan-600 text-white hover:bg-green-400 transition-all duration-300">View
@@ -437,26 +470,25 @@
             </div>
           </div>
 
-          <!-- Project landing page -->
-
+          <!-- Project school exhibition landing page -->
           <div
             class="project-box p-4 rounded-lg flex flex-col items-center relative animate__animated  animate-on-scroll"
             data-animate="animate__fadeInUp">
             <div
               class="layer absolute w-full h-full rounded-3xl bg-blue-600 border-white border-2 flex justify-center items-center gap-5">
-              <a href="https://github.com/khalid-raza03/category-page" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/khalid-raza03/school-exhibition-landing-page" target="_blank" rel="noopener noreferrer">
                 <i
                   class="fa-solid fa-code text-xl text-blue-600 bg-white p-10 rounded-full hover:scale-105 transition-all duration-300"></i></a>
-              <a href="https://khalid-raza03.github.io/category-page/" target="_blank" rel="noopener noreferrer">
+              <a href="https://khalid-raza03.github.io/school-exhibition-landing-page/" target="_blank" rel="noopener noreferrer">
                 <i
                   class="fa-solid fa-link text-xl text-blue-600 bg-white p-10 rounded-full hover:scale-105 transition-all duration-300"></i></a>
             </div>
             <div class="img-box h-full">
-              <img src="./images/project-6.png" alt class="object-cover w-full h-full" />
+              <img src="./images/school-exhibition-project.png" alt class="object-cover w-full h-full" />
             </div>
             <div class="project-info flex flex-col gap-4 w-full items-center rounded-bl-xl rounded-br-xl">
-              <h4 class="text-2xl font-bold text-white text-center">
-                E-commerce landing page
+              <h4 class="text-lg md:text-2xl  font-bold text-white text-center">
+              School Exhibition Wepage
               </h4>
               <a href="#"
                 class="px-8 py-4 rounded-lg bg-cyan-600 text-white hover:bg-green-400 transition-all duration-300">View
@@ -481,8 +513,8 @@
               <img src="./images/project-4.png" alt class="object-cover w-full h-full" />
             </div>
             <div class="project-info flex flex-col gap-4 w-full items-center rounded-bl-xl rounded-br-xl">
-              <h4 class="text-2xl font-bold text-white text-center">
-                Ubuy Homepage Clone
+              <h4 class="text-lg md:text-2xl font-bold text-white text-center">
+                E-commerce Landing page
               </h4>
               <a href="#"
                 class="px-8 py-4 rounded-lg bg-cyan-600 text-white hover:bg-green-400 transition-all duration-300">View
@@ -493,7 +525,8 @@
       </div>
     </section>
 
-    <section id="contacts" class=" contact-section py-20 relative overflow-hidden">
+    <!-- contacts section -->
+    <section id="contacts" class="section section_dark contact-section py-20 relative overflow-hidden">
       <div
         class=" absolute top-3/4  left-1/2 rounded-3xl transform -translate-x-1/2 -translate-y-1/2  h-[40rem] w-[40rem] bg-blue-200 opacity-10 -z-60 rotate-45">
       </div>
@@ -570,7 +603,7 @@
                 Name
               </label>
               <input type="text" id="name"
-                class="w-full px-4 py-2 border border-blue-300 rounded-md focus:outline-none focus:border-blue-600 bg-white"
+                class="w-full px-4 py-2 border border-blue-300 rounded-md focus:outline-none focus:border-blue-600 bg-white text-black"
                 required />
             </form>
             <form class="flex flex-col gap-2">
@@ -578,7 +611,7 @@
                 Email
               </label>
               <input type="email" id="email"
-                class="w-full px-4 py-2 border border-blue-300 bg-white rounded-md focus:outline-none focus:border-blue-600"
+                class="w-full px-4 py-2 border border-blue-300 bg-white rounded-md focus:outline-none focus:border-blue-600 text-black"
                 required />
             </form>
             <form class="flex flex-col gap-2">
@@ -586,7 +619,7 @@
                 Message
               </label>
               <textarea id="message"
-                class="w-full px-4 py-2 border border-blue-300 rounded-md focus:outline-none bg-white focus:border-blue-600 h-32"
+                class="w-full px-4 py-2 border border-blue-300 rounded-md focus:outline-none bg-white focus:border-blue-600 h-32 text-black"
                 required></textarea>
             </form>
             <button type="submit"
@@ -600,6 +633,13 @@
     </section>
 
   </main>
+
+  <footer>
+    <div class="section section_dark bg-blue-800 py-6 flex justify-center">
+      <p class="footer-txt text-center text-white ">&nbsp; © 2024 Khalid Raja. All rights reserved. &nbsp;</p>
+    </div>
+  </footer>
+  </div> <!-- End of content div -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <script src="./script.js"></script>
 </body>

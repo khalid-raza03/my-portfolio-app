@@ -55,7 +55,9 @@ document.addEventListener("DOMContentLoaded", function () {
 const themeToggleBtn = document.getElementById("theme-toggle");
 themeToggleBtn.addEventListener("click", () => {
   themeToggleBtn.classList.toggle("dark");
+  document.querySelector(".fa-moon").classList.toggle("invisible");
   document.querySelector(".fa-sun").classList.toggle("invisible");
+
 
   document.body.classList.toggle("body_dark");
   document.body.classList.toggle("text");
@@ -69,3 +71,13 @@ themeToggleBtn.addEventListener("click", () => {
     section.classList.toggle("dark");
   });
 });
+
+
+//spinner script
+
+  window.addEventListener("load", function () {
+    setTimeout(() => {
+      document.getElementById("preloader").style.display = "none";
+      document.getElementById("content").style.display = "block";
+    }, 1500);
+  });
