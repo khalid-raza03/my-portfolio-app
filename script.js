@@ -81,3 +81,6 @@ themeToggleBtn.addEventListener("click", () => {
       document.getElementById("content").style.display = "block";
     }, 1500);
   });
+
+  //latest year
+  document.getElementById("year").innerHTML = new Date().getFullYear();
