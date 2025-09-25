@@ -410,7 +410,26 @@ html {
   border: 0;
 }
 
+.my-git{
+  position: absolute;
+  top: 16%;
+  right: 15%;
+  transform: rotate(45deg);
+  animation: popUp 5s linear infinite;
+  border-radius: 50%;
+  transition: box-shadow 0.5s ease-in-out;
 
+  &:hover{
+    box-shadow: 2px 6px 8px #f7f4f463;
+  }
+}
+
+@keyframes popUp {
+  0%, 100% { transform: rotate(45deg) translateY(0); }
+  50% { transform: rotate(45deg) translateY(-5px); scale: 1.18;}
+  75% { transform: rotate(45deg) translateY(-2px); scale: 1.13; }
+  100% { transform: rotate(45deg) translateY(0); scale: 1; }
+}
 
 .preloader-img img {
   animation: pulse 1.2s ease-in-out infinite;
