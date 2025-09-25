@@ -92,10 +92,10 @@ html {
     transform: scale(1.15);
   }
 
-  .my-pic {
+  .my_pic {
     transition: all 1.2s cubic-bezier(0.39, 0.575, 0.565, 1);
   }
-  .my-img-box:hover .my-pic {
+  .my-img-box:hover .my_pic {
     transform: scale(0.7);
     opacity: 0.85;
   }
@@ -450,3 +450,5 @@ html {
     transition: none !important;
   }
 }
+
+
