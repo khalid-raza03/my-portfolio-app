@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8">
@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <link rel="stylesheet" href="./styles.css">
+  
 </head>
 
 <body class="body_dark">
@@ -152,7 +153,7 @@
       <div class="container mx-auto p-10 mt-5">
         <div class="hero-section-wrapper flex justify-around lg:flex-row flex-col-reverse gap-5 sm:gap-10 items-center">
           <div class="left relative flex flex-col gap-5 justify-center">
-            <a class="my-git" target="_blank" href="https://github.com/khalid-raza03/"><i class="fa-brands fa-github text-4xl"></i></a>
+            <a class="my-git" target="_blank" href="https://github.com/khalid-raza03/"><i class="fa-brands fa-github text-3xl md:text-4xl"></i></a>
             <p class="text-2xl sm:text-4xl font-semibold text-blue-800 font-bubblegum">
               I am
             </p>
@@ -163,7 +164,7 @@
               A frontend developer and designer
             </p>
             <a href="#contacts"
-              class="bg-gradient-to-bl from-white to-blue-600 hover:from-white hover:to-white hover:text-blue-600 hover:border-blue-600 text-center font-bold px-6 py-3 rounded-lg shadow-md border-2  transition-all duration-300 text-white text-xl">Contact
+              class="bg-gradient-to-bl from-white to-blue-600 hover:from-white hover:to-white hover:text-blue-400 hover:border-blue-600 text-center font-bold px-6 py-3 hover:scale-95 rounded-lg shadow-md border-2  transition-all duration-300 text-blue-800 text-xl">Contact
               me</a>
           </div>
 
@@ -247,7 +248,7 @@
       </h3>
 
       <div class="container mx-auto p-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-3 gap-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-3 gap-y-6 justify-items-center xl:justify-items-stretch">
           <div
             class="skill-box dark  flex flex-col items-center gap-4 bg-white py-4 rounded-lg animate__animated  animate-on-scroll"
             data-animate="animate__fadeInUp">
@@ -598,35 +599,36 @@
             </ul>
 
           </div>
-          <div class="contact-form flex flex-col gap-4 ">
-            <form class="flex flex-col gap-2">
-              <label for="name" class="text-xl font-bold text-blue-600 text">
-                Name
-              </label>
-              <input type="text" id="name"
-                class="w-full px-4 py-2 border border-blue-300 rounded-md focus:outline-none focus:border-blue-600 bg-white text-black"
-                required />
+          <div class="contact-form flex flex-col gap-4">
+            <form id="myForm" class="flex flex-col gap-4" onsubmit="return validateForm()">
+              <div class="flex flex-col gap-2">
+                <label for="user_name" class="text-xl font-bold text-blue-600 text">
+                  Name
+                </label>
+                <input type="text" id="user_name" name="user_name"
+                  class="w-full px-4 py-2 border border-blue-300 rounded-md focus:outline-none focus:border-blue-600 bg-white text-black"
+                  required>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="email" class="text-lg font-bold text-blue-600 text">
+                  Email
+                </label>
+                <input type="email" id="email" name="email"
+                  class="w-full px-4 py-2 border border-blue-300 bg-white rounded-md focus:outline-none focus:border-blue-600 text-black"
+                  required>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="msg" class="text-lg font-bold text-blue-600 text">
+                  Message
+                </label>
+                <textarea id="msg" name="msg"
+                  class="w-full px-4 py-2 border border-blue-300 rounded-md focus:outline-none bg-white focus:border-blue-600 h-32 text-black"
+                  required></textarea>
+              </div>
+              <button type="submit" class="sendbtn text-xl px-4 py-3 rounded-lg bg-blue-800 text-white hover:bg-blue-200 hover:text-blue-800 transition-all duration-300 border border-blue-800">
+                Submit
+              </button>
             </form>
-            <form class="flex flex-col gap-2">
-              <label for="email" class="text-lg font-bold text-blue-600 text">
-                Email
-              </label>
-              <input type="email" id="email"
-                class="w-full px-4 py-2 border border-blue-300 bg-white rounded-md focus:outline-none focus:border-blue-600 text-black"
-                required />
-            </form>
-            <form class="flex flex-col gap-2">
-              <label for="message" class="text-lg font-bold text-blue-600 text">
-                Message
-              </label>
-              <textarea id="message"
-                class="w-full px-4 py-2 border border-blue-300 rounded-md focus:outline-none bg-white focus:border-blue-600 h-32 text-black"
-                required></textarea>
-            </form>
-            <button type="submit"
-              class=" text-xl px-4 py-3 rounded-lg bg-blue-800 text-white hover:bg-blue-200 hover:text-blue-800 transition-all duration-300 border border-blue-800">
-              Submit
-            </button>
           </div>
         </div>
       </div>
@@ -641,7 +643,40 @@
     </div>
   </footer>
   </div> <!-- End of content div -->
+  
+  <!-- Custom Popup -->
+   <div id="custom-popup" class="flex-column  items-center justify-center" style="display: none;">
+    <div id="popup-message"></div>
+    <div class="socials flex gap-3 flex-col justify-center pt-2">
+      <p class="sm:text-lg text-lg font-bold text-blue-500 ">Stay Connected</p> 
+      <div class="icons-box flex gap-5 justify-center">
+         <a href="http://linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin text-[#0A66C2] text-2xl"></i></a>
+      <a href="http://instagram.com" target="_blank" rel="noopener noreferrer"> <i class="text-2xl fa-brands fa-instagram text-[#E4405F]"></i></a>
+      <a href="http://github.com" target="_blank" rel="noopener noreferrer"><i class="text-2xl fa-brands fa-github text-[#181717]"></i></a>
+      </div>
+     
+    </div>
+    <button onclick="closePopUp()" class="popup-close-btn px-4 py-2 mt-3 text-white rounded-lg">
+      Close
+    </button>
+  </div>
+  
+  
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script>
+    function validateForm() {
+      const name = document.getElementById('user_name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('msg').value.trim();
+      
+      if (!name || !email || !message) {
+        alert('Please fill in all fields');
+        return false;
+      }
+      
+      return true;
+    }
+  </script>
   <script src="./script.js"></script>
 </body>
 
