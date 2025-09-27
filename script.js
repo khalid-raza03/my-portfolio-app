@@ -167,7 +167,7 @@ async function sendToExcel(formId = "myForm") {
     console.log("Data sent to Google Apps Script");
     
     showStatusMessage(
-      `Thanks for contacting dear ${name} , I will reach you shortly`,
+      `Thanks for contacting dear ${name} ,  I will reach you shortly`,
       "success"
     );
     form.reset();

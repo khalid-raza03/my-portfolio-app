@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Macondo+Swash+Caps&display=swap");
 @import "tailwindcss";
 
 * {
@@ -407,7 +407,7 @@
   border: 0;
 }
 
-.my-git{
+.my-git {
   position: absolute;
   top: 16%;
   right: 15%;
@@ -416,16 +416,28 @@
   border-radius: 50%;
   transition: all 0.5s ease-in-out;
 
-  &:hover{
+  &:hover {
     box-shadow: 2px 6px 8px #f7f4f463;
   }
 }
 
 @keyframes popUp {
-  0%, 100% { transform: rotate(45deg) translateY(0); }
-  50% { transform: rotate(45deg) translateY(-5px); scale: 1.2;}
-  75% { transform: rotate(45deg) translateY(-2px); scale: 1.15; }
-  100% { transform: rotate(45deg) translateY(0); scale: 1; }
+  0%,
+  100% {
+    transform: rotate(45deg) translateY(0);
+  }
+  50% {
+    transform: rotate(45deg) translateY(-5px);
+    scale: 1.2;
+  }
+  75% {
+    transform: rotate(45deg) translateY(-2px);
+    scale: 1.15;
+  }
+  100% {
+    transform: rotate(45deg) translateY(0);
+    scale: 1;
+  }
 }
 
 .preloader-img img {
@@ -433,37 +445,41 @@
 }
 
 @keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.2); }
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
 }
 
-
-@media (max-width:630px) {
-  .my-git{
+@media (max-width: 630px) {
+  .my-git {
     top: 14%;
     right: 48%;
   }
 }
 
-
-
-
-
 /* Custom Popup Styles */
 #custom-popup {
   position: fixed;
-  top: 50%;
+  top: 60%;
   left: 50%;
+  width: 90%;
   transform: translate(-50%, -50%);
-  padding: 2% 3%;
+  padding: 25px 20px;
   border-radius: 25px;
+  gap: 3%;
   color: #0251f9;
-  background: linear-gradient(45deg, #5097cff7, transparent);
-  font-weight: bold;
+  background: #154ca740;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 2px solid #154ca72e;
+  font-weight: 500;
   z-index: 9999;
-  background-color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
+  box-shadow: 0 4px 8px #0000fc1a;
+  max-width: 700px;
   transition: all 0.3s ease-in-out;
   text-align: center;
   flex-direction: column;
@@ -471,9 +487,19 @@
 }
 
 #popup-message {
-  font-size: calc(12px + (25 - 12) * ((100vw - 320px) / (1600 - 320)));
+  font-size: calc(12px + (26 - 14) * ((100vw - 320px) / (1600 - 320)));
   text-align: center;
-  color: #155dfc;
+  font-family: "Macondo Swash Caps", cursive !important;
+  line-height: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 1.5% 0;
+  color: #000;
+}
+
+.stay-connected {
+  font-size: calc(12px + (18 - 12) * ((100vw - 320px) / (1600 - 320)));
+  color: #000;
 }
 
 .popup-close-btn {
@@ -482,7 +508,7 @@
   transition: all 0.3s ease-in-out;
   background-color: #155dfc;
   border: none;
-  padding: 3% 16%;
+  padding: 2% 8%;
   cursor: pointer;
 }
 
@@ -503,5 +529,3 @@
     transition: none !important;
   }
 }
-
-
