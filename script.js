@@ -79,11 +79,107 @@ themeToggleBtn.addEventListener("click", () => {
     setTimeout(() => {
       document.getElementById("preloader").style.display = "none";
       document.getElementById("content").style.display = "block";
-    }, 1500);
+    }, 1000);
   });
 
   //latest year
   document.getElementById("year").innerHTML = new Date().getFullYear();
+
+  // Projects data
+  const projectsData = [
+    {
+      title: "Shop Elegance",
+      image: "./images/project-1.png",
+      githubUrl: "https://github.com/khalid-raza03/Shop-Elegance",
+      liveUrl: "https://khalid-raza03.github.io/Shop-Elegance/"
+    },
+    {
+      title: "Educational Website Template",
+      image: "./images/project-2.png",
+      githubUrl: "https://github.com/khalid-raza03/Edule-An-educational-website-template-",
+      liveUrl: "https://khalid-raza03.github.io/Edule-An-educational-website-template-/"
+    },
+    {
+      title: "Affiliate Marketing Webpage",
+      image: "./images/project-3.png",
+      githubUrl: "https://github.com/khalid-raza03/Uglow-clone",
+      liveUrl: "https://khalid-raza03.github.io/Uglow-clone/"
+    },
+    {
+      title: "Nexcent (Marketing Webpage)",
+      image: "./images/project-5.png",
+      githubUrl: "https://github.com/khalid-raza03/Nexcent",
+      liveUrl: "https://khalid-raza03.github.io/Nexcent/"
+    },
+    {
+      title: "School Exhibition Webpage",
+      image: "./images/school-exhibition-project.png",
+      githubUrl: "https://github.com/khalid-raza03/school-exhibition-landing-page",
+      liveUrl: "https://khalid-raza03.github.io/school-exhibition-landing-page/"
+    },
+    {
+      title: "E-commerce Landing Page",
+      image: "./images/project-4.png",
+      githubUrl: "https://github.com/khalid-raza03/Ubuy-HomePage-Clone",
+      liveUrl: "https://khalid-raza03.github.io/Ubuy-HomePage-Clone/"
+    },
+      {
+      title: "Todo React webapp",
+      image: "./images/todo-project.png",
+      githubUrl: "https://github.com/khalid-raza03/Daily-task-manager",
+      liveUrl: "https://daily-task-managing.netlify.app/"
+    },
+      {
+      title: "Weather forecast ",
+      image: "./images/weather-app-project.png",
+      githubUrl: "https://github.com/khalid-raza03/weather-api-webapp",
+      liveUrl: "https://khalid-raza03.github.io/weather-api-webapp/"
+    },
+      {
+      title: "Favourite music react app",
+      image: "./images/favourite-music-project.png",
+      githubUrl: "https://github.com/khalid-raza03/favourite-music-project",
+      liveUrl: "https://effervescent-kringle-f20c96.netlify.app/"
+    }
+  ];
+
+  // Generate projects dynamically
+  function generateProjects() {
+    const container = document.getElementById('projects-container');
+    
+    projectsData.forEach(project => {
+      const projectHTML = `
+        <div class="project-box p-4 rounded-lg flex flex-col items-center relative animate__animated animate-on-scroll" data-animate="animate__fadeInUp">
+          <div class="layer absolute w-full h-full rounded-3xl bg-blue-600 border-white border-2 flex justify-center items-center gap-5">
+            <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-code text-xl text-blue-600 bg-white p-10 rounded-full hover:scale-105 transition-all duration-300"></i>
+            </a>
+            <a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-link text-xl text-blue-600 bg-white p-10 rounded-full hover:scale-105 transition-all duration-300"></i>
+            </a>
+          </div>
+          <div class="img-box h-full">
+            <img src="${project.image}" alt="${project.title}" class="object-cover aspect-[2/1] w-full h-full" />
+          </div>
+          <div class="project-info flex flex-col gap-4 w-full items-center rounded-bl-xl rounded-br-xl">
+            <h4 class="text-lg md:text-2xl font-bold text-white text-center">${project.title}</h4>
+            <a href="${project.liveUrl}" target="_blank" class="px-8 py-4 rounded-lg bg-cyan-600 text-white hover:bg-green-400 transition-all duration-300">
+              View <i class="text-white fa-solid fa-eye ps-3"></i>
+            </a>
+          </div>
+        </div>
+      `;
+      container.innerHTML += projectHTML;
+    });
+    
+    // Re-observe new elements for animations
+    document.querySelectorAll(".animate-on-scroll").forEach((elem) => {
+      observer.observe(elem);
+    });
+  }
+
+  // Generate projects on page load
+  generateProjects();
 
   // form data export to excel sheet
 
