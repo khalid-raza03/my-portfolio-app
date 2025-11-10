@@ -85,10 +85,10 @@
 
 @media (min-width: 768px) {
   .my-pic-cover {
-    transition: transform 0.8s cubic-bezier(0.39, 0.575, 0.565, 1);
+    transition: all 0.8s cubic-bezier(0.39, 0.575, 0.565, 1);
   }
   .my-img-box:hover .my-pic-cover {
-    transform: scale(1.15);
+     scale: 1.15;
   }
 
   .my_pic {
@@ -225,7 +225,7 @@
     transform: translate(112px, 112px);
   }
   50% {
-    transform: translate(112px, 112px); /* pause */
+    transform: translate(112px, 112px); 
   }
   75% {
     transform: translate(0, 0);

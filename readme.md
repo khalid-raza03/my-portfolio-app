@@ -12,7 +12,7 @@
 👉 [Live Preview](https://khalid-raza03.github.io/my-portfolio-app/)  
 
 ## Screenshots
-![Project Screenshot](./images/my-porfolio.png)
+![Project Screenshot](./images/my-portfolio.png)
 
 ## Technologies  
 - HTML5 

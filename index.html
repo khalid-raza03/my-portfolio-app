@@ -10,513 +10,528 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <link rel="stylesheet" href="./dist/output.css">
   <link rel="stylesheet" href="./styles.css">
-  
+
 </head>
 
 <body class="body_dark">
   <div id="preloader" class="fixed inset-0 bg-gray-900 flex justify-center items-center z-50">
-    <div class="preloader-img"> 
+    <div class="preloader-img">
       <img src="./images/my-formal-pic.jpg" alt="my-pic" height="120" width="120" class="rounded-full">
     </div>
   </div>
   <div id="content" style="display: none;">
     <!-- Skip to main content link for screen readers -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
-  <a id="scroll-to-top"
-    class="scroll-to-top fixed bottom-6 right-6 text-blue-600 bg-white border border-blue-600 hover:bg-blue-600 hover:text-white px-3 py-2 rounded-full shadow transition-all duration-300 z-50"
-    href="#home" aria-label="Scroll to top of page" tabindex="0">
-    <i class="fa-solid fa-angle-up text-xl" aria-hidden="true"></i>
-  </a>
+    <a id="scroll-to-top"
+      class="scroll-to-top fixed bottom-6 right-6 text-blue-600 bg-white border border-blue-600 hover:bg-blue-600 hover:text-white px-3 py-2 rounded-full shadow transition-all duration-300 z-50"
+      href="#home" aria-label="Scroll to top of page" tabindex="0">
+      <i class="fa-solid fa-angle-up text-xl" aria-hidden="true"></i>
+    </a>
 
-  <header class="header header_dark shadow-lg w-full sticky top-0" style="z-index: 999; background-color: #fff;">
-    <!-- mobile menu -->
-    <div
-      class="header__mobile-menu absolute -left-1/4 -top-1/3 sm:hidden  rounded-full bg-blue-600/75 flex items-center justify-center"
-      id="mobile-menu" aria-hidden="true">
-      <ul class="header__mobile-list flex flex-col gap-5" role="list">
-        <li class="header__mobile-item">
-          <a href="#home"
-            class="header__mobile-link text-lg font-semibold text-blue-600 bg-white px-5 py-2 rounded-full hover:scale-95 transition-all duration-300 ">Home</a>
-        </li>
-        <li class="header__mobile-item">
-          <a href="#about"
-            class="header__mobile-link text-lg font-semibold text-blue-600 bg-white px-5 py-2 rounded-full hover:scale-95 transition-all duration-300 ">About</a>
-        </li>
-        <li class="header__mobile-item">
-          <a href="#skills"
-            class="header__mobile-link text-lg font-semibold text-blue-600 bg-white px-5 py-2 rounded-full hover:scale-95 transition-all duration-300">Skills</a>
-        </li>
-        <li class="header__mobile-item">
-          <a href="#projects"
-            class="header__mobile-link text-lg font-semibold text-blue-600 bg-white px-5 py-2 rounded-full hover:scale-95 transition-all duration-300 ">Projects</a>
-        </li>
-        <li class="header__mobile-item">
-          <a href="#contacts"
-            class="header__mobile-link text-lg font-semibold text-blue-600 bg-white px-5 py-2 rounded-full hover:scale-95 transition-all duration-300 ">Contact</a>
-        </li>
-      </ul>
-    </div>
-
-    <!-- desktop navigation -->
-    <nav class="header__nav" role="navigation" aria-label="Main navigation">
-      <div class="header__container container mx-auto">
-        <div
-          class="header__wrapper flex  lg:justify-around justify-between  items-center relative overflow-hidden py-10 px-4 sm:px-0">
-          <span
-            class="header__decoration header__decoration--circle-1 animate__animated animate__bounce absolute h-40 w-40 rounded-full bg-blue-800 opacity-35 p-5 left-3 top-12 sm:top-6 invisible sm:visible"
-            aria-hidden="true"></span>
-          <span
-            class="header__decoration header__decoration--circle-2 absolute h-40 w-40 rotate-135 bg-blue-800 opacity-55 p-5 -right-7 sm:right-0 top-20 invisible sm:visible"
-            aria-hidden="true"></span>
-          <span
-            class="header__decoration header__decoration--circle-3 animate__animated animate__bounce absolute h-96 w-96 rounded-full bg-blue-800 opacity-40 p-5 left-5 sm:left-1/4 bottom-5 invisible sm:visible"
-            aria-hidden="true"></span>
-
-          <div class="header__logo">
-            <h1 class="header__title fade-text text-xl md:text-2xl lg:text-4xl font-extrabold font-bubblegum">
-              Khalid Raja
-            </h1>
-            <div class="header__subtitle-wrapper" aria-label="Professional roles">
-              <span
-                class="header__subtitle fade-text text-2xl md:text-3xl lg:text-4xl font-extrabold font-bubblegum text-blue-800 text">I'm
-                Designer</span>
-              <span
-                class="header__subtitle fade-text text-2xl md:text-3xl lg:text-4xl font-extrabold font-bubblegum text-blue-800 text">I'm
-                Developer</span>
-              <span
-                class="header__subtitle fade-text text-2xl md:text-3xl lg:text-4xl font-extrabold font-bubblegum text-blue-800 text">I'm
-                Freelancer</span>
-            </div>
-          </div>
-
-
-          <div class="theme-selection ms-36">
-            <button id="theme-toggle" aria-label="Toggle dark mode"
-              class="w-12 h-12 px-4 py-2 inline-flex items-center relative z-50 border border-yellow-500 bg-blue-600 rounded-full transition-all duration-300 ease-in-out">
-              <i class="fa-solid fa-moon  text-2xl text-start absolute right-2 top-1/4" aria-hidden="true"
-                style="color: #ffffff;"></i>
-              <i class="absolute fa-solid  fa-sun text-yellow-500 text-2xl text-start left-2 top-1/4 invisible"
-                aria-hidden="true"></i>
-            </button>
-          </div>
-
-          <button class="header__menu-toggle md:hidden block p-2" id="menu-toggle" aria-expanded="false"
-            aria-controls="mobile-menu" aria-label="Toggle navigation menu">
-            <span class="header__menu-icon header__menu-icon--open" id="menu-open">
-              <i class="fa-solid fa-bars text-blue-900 text-2xl" aria-hidden="true"></i>
-            </span>
-            <span class="header__menu-icon header__menu-icon--close" id="menu-close" style="display: none;">
-              <i class="fa-solid fa-xmark text-blue-900 text-2xl" aria-hidden="true"></i>
-            </span>
-          </button>
-
-          <ul class="header__nav-list gap-x-8 hidden md:flex" role="list">
-            <li class="header__nav-item">
-              <a href="#home" class="header__nav-link nav-link text-md md:text-xl font-semibold text-blue-800 text"
-                aria-current="page">Home</a>
-            </li>
-            <li class="header__nav-item">
-              <a href="#about"
-                class="header__nav-link nav-link text-md md:text-xl font-semibold text-blue-800 text">About</a>
-            </li>
-            <li class="header__nav-item">
-              <a href="#skills"
-                class="header__nav-link nav-link text-md md:text-xl font-semibold text-blue-800 text">Skills</a>
-            </li>
-            <li class="header__nav-item">
-              <a href="#projects"
-                class="header__nav-link nav-link text-md md:text-xl font-semibold text-blue-800 text">Projects</a>
-            </li>
-            <li class="header__nav-item">
-              <a href="#contacts"
-                class="header__nav-link nav-link text-md md:text-xl font-semibold text-blue-800 text">Contact</a>
-            </li>
-          </ul>
-
-        </div>
-
-      </div>
-    </nav>
-  </header>
-
-
-
-  <main id="main-content" class="portfolio">
-
-    <!-- hero section -->
-    <section id="home" class="hero-section relative py-20" aria-labelledby="hero-heading">
-      <span
-        class="circle-1 hidden lg:block absolute h-32 w-32 rounded-full  bg-blue-200 z-20 p-5 left-28 top-30"></span>
-      <span
-        class="circle-2 hidden lg:block absolute h-10 w-10 rounded-full  bg-blue-800 opacity-35 z-10 p-5 left-20 top-16"></span>
-      <span
-        class="circle-3 hidden lg:block absolute h-20 w-20 rounded-full  bg-blue-500 z-20 p-5 opacity-35 left-24 top-20"></span>
-      <div class="container mx-auto p-10 mt-5">
-        <div class="hero-section-wrapper flex justify-around lg:flex-row flex-col-reverse gap-5 sm:gap-10 items-center">
-          <div class="left relative flex flex-col gap-5 justify-center">
-            <a class="my-git" target="_blank" href="https://github.com/khalid-raza03/"><i class="fa-brands fa-github text-3xl md:text-4xl"></i></a>
-            <p class="text-2xl sm:text-4xl font-semibold text-blue-800 font-bubblegum">
-              I am
-            </p>
-            <p class="text-3xl sm:text-6xl font-bold text-blue-600 font-bubblegum">
-              Khalid Raja
-            </p>
-            <p class="text-lg sm:text-xl font-semibold italic text-blue-800 font-bubblegum">
-              A frontend developer and designer
-            </p>
+    <header class="header header_dark shadow-lg w-full sticky top-0" style="z-index: 999; background-color: #fff;">
+      <!-- mobile menu -->
+      <div
+        class="header__mobile-menu absolute -left-1/4 -top-1/3 sm:hidden  rounded-full bg-blue-600/75 flex items-center justify-center"
+        id="mobile-menu" aria-hidden="true">
+        <ul class="header__mobile-list flex flex-col gap-5" role="list">
+          <li class="header__mobile-item">
+            <a href="#home"
+              class="header__mobile-link text-lg font-semibold text-blue-600 bg-white px-5 py-2 rounded-full hover:scale-95 transition-all duration-300 ">Home</a>
+          </li>
+          <li class="header__mobile-item">
+            <a href="#about"
+              class="header__mobile-link text-lg font-semibold text-blue-600 bg-white px-5 py-2 rounded-full hover:scale-95 transition-all duration-300 ">About</a>
+          </li>
+          <li class="header__mobile-item">
+            <a href="#skills"
+              class="header__mobile-link text-lg font-semibold text-blue-600 bg-white px-5 py-2 rounded-full hover:scale-95 transition-all duration-300">Skills</a>
+          </li>
+          <li class="header__mobile-item">
+            <a href="#projects"
+              class="header__mobile-link text-lg font-semibold text-blue-600 bg-white px-5 py-2 rounded-full hover:scale-95 transition-all duration-300 ">Projects</a>
+          </li>
+          <li class="header__mobile-item">
             <a href="#contacts"
-              class="bg-linear-to-bl from-white to-blue-600 hover:from-white hover:to-white hover:text-blue-400 hover:border-blue-600 text-center font-bold px-6 py-3 hover:scale-95 rounded-lg shadow-md border-2  transition-all duration-300 text-blue-800 text-xl">Contact
-              me</a>
-          </div>
-
-          <div class="my-img-box max-w-sm rounded-3xl relative">
-            <span
-              class="my-pic-cover hidden sm:block absolute h-10 w-full -z-10 bg-blue-600 opacity-55 -rotate-45 -left-32 top-24 move45-1"></span>
-            <span
-              class="my-pic-cover hidden sm:block absolute h-10 w-full -z-10 bg-blue-600 opacity-55 rotate-45 -left-32 bottom-20 move45-2"></span>
-            <span
-              class="my-pic-cover hidden sm:block absolute h-10 w-full -z-10 bg-blue-600 opacity-55 rotate-45 -right-32 top-24 move45-3"></span>
-            <span
-              class="my-pic-cover hidden sm:block absolute h-10 w-full -z-10 bg-blue-600 opacity-55 -rotate-45 -right-32 bottom-20 move45-4"></span>
-            <img src="./images/my-formal-pic.jpg" class="my_pic relative z-10 object-cover rounded-3xl"
-              alt="Khalid Raja - Frontend Developer and Designer professional photo">
-          </div>
-
-        </div>
+              class="header__mobile-link text-lg font-semibold text-blue-600 bg-white px-5 py-2 rounded-full hover:scale-95 transition-all duration-300 ">Contact</a>
+          </li>
+        </ul>
       </div>
-      <span
-        class="circle-1 absolute h-32 w-32 rounded-full bg-blue-200 z-20 p-5 left-1/2 bottom-1 hidden xl:block"></span>
-      <span
-        class="circle-2 absolute h-10 w-10 rounded-full bg-blue-800 opacity-35 z-10 p-5 left-1/2 bottom-32 hidden xl:block"></span>
-      <span
-        class="circle-3 absolute h-20 w-20 rounded-full bg-blue-500 z-20 p-5 opacity-35 left-1/2 bottom-20 hidden xl:block"></span>
 
-      <div
-        class="move-scale absolute bottom-12 left-16 rotate-45 h-52 w-52 bg-linear-to-bl from-white to-blue-300 -z-10 hidden lg:block">
-      </div>
-    </section>
-
-    <!-- about section -->
-    <section id="about" class="section section_dark about py-20 " aria-labelledby="about-heading">
-      <div class="about__container container mx-auto p-10">
-        <h2 id="about-heading"
-          class="about__title text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-8">
-          About Me
-        </h2>
-        <div class="flex justify-around gap-10 lg:flex-row flex-col-reverse items-center ">
-          <div class="flex flex-col gap-2">
-            <p class="text-lg text-white text-justify mb-3 max-w-xl font-serif tracking-wider italic ">
-              I’m Khalid Raja, a 23-year-old frontend developer and designer.
-              With a deep passion for coding, I’ve dedicated myself to building user-friendly websites and applications
-              with creativity and attention to detail. My goal is to help individuals and businesses achieve their
-              objectives while creating meaningful connections with their users.
-
-              I have a strong foundation in HTML, CSS, and JavaScript, along with experience in popular frameworks like
-              Tailwind CSS, Bootstrap, and the widely used JavaScript library React.js. I’m committed to continuous
-              learning and staying updated with the latest trends and technologies in the web development industry.
-
-              Currently working remotely, I’m always open to new opportunities to collaborate with talented developers
-              and designers on exciting and impactful projects.
-
-
-            </p>
-
-            <p class="text-lg font-medium text-white">Age: 23</p>
-            <p class="text-lg font-medium text-white">
-              Location: West Bengal, India
-            </p>
-            <p class="text-lg font-medium text-white">
-              Email: Khalidraza30565@gmail.com
-            </p>
-            <p class="text-lg font-medium text-white">
-              Phone: +91 9563751684
-            </p>
-          </div>
-          <div class="flex">
-            <div class="img-box p-10 max-w-2xl">
-              <img src="./images/image.png"
-                class="rounded-lg object-cover hover:scale-95 transition-all duration-300 w-100" alt />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- skill section -->
-    <section id="skills" class="section section_dark my-skills py-20 bg-blue-100  ">
-      <h3 class="text-3xl  md:text-4xl lg:text-5xl font-bold text-blue-800 text-center mb-8 ">
-       Technical Skills
-      </h3>
-
-      <div class="container mx-auto p-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-3 gap-y-6 justify-items-center xl:justify-items-stretch">
+      <!-- desktop navigation -->
+      <nav class="header__nav" role="navigation" aria-label="Main navigation">
+        <div class="header__container container mx-auto">
           <div
-            class="skill-box dark  flex flex-col items-center gap-4 bg-white py-4 rounded-lg animate__animated  animate-on-scroll"
-            data-animate="animate__fadeInUp">
+            class="header__wrapper flex  lg:justify-around justify-between  items-center relative overflow-hidden py-10 px-4 sm:px-0">
+            <span
+              class="header__decoration header__decoration--circle-1 animate__animated animate__bounce absolute h-40 w-40 rounded-full bg-blue-800 opacity-35 p-5 left-3 top-12 sm:top-6 invisible sm:visible"
+              aria-hidden="true"></span>
+            <span
+              class="header__decoration header__decoration--circle-2 rounded-full absolute h-40 w-40 rotate-135 bg-blue-800 opacity-55 p-5 -right-7 sm:right-0 top-20 invisible sm:visible"
+              aria-hidden="true"></span>
+            <span
+              class="header__decoration header__decoration--circle-3 animate__animated animate__bounce absolute h-96 w-96 rounded-full bg-blue-800 opacity-40 p-5 left-5 sm:left-1/4 bottom-5 invisible sm:visible"
+              aria-hidden="true"></span>
 
-            <p class="skill-head text-xl font-medium text-blue-300">LANGUAGES </p>
-            <div class="skill-item-box flex gap-x-2 gap-y-4 flex-wrap justify-center">
-              <div class="skill-items flex gap-2 px-8 items-center flex-col">
-                <img src="./images/html.png" alt="html-img" height="70" width="70"
-                  class="transition-all duration-300 ease-in-out rounded-full"> <span class="skill-name">HTML5</span>
-              </div>
-
-              <div class="skill-items flex gap-3 px-8 items-center flex-col">
-                <img src="./images/css-img.png" alt="css-img" height="70" width="70"
-                  class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span
-                  class="skill-name">CSS3</span>
-              </div>
-              <div class="skill-items flex gap-3 px-8 items-center flex-col">
-                <img src="./images/js.png" alt="JavaScript-img" height="70" width="70"
-                  class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span class="skill-name">Js
-                  (ES6+)</span>
-              </div>
-              <div class="skill-items flex gap-3 px-8 items-center flex-col">
-                <img src="./images/cpp.png" alt="cpp-img" height="70" width="70"
-                  class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span
-                  class="skill-name">C++</span>
-              </div>
-
-              <div class="skill-items flex gap-3 px-8 items-center flex-col">
-                <img src="./images/python.webp" alt="python-img" height="70" width="70"
-                  class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span
-                  class="skill-name">Python</span>
+            <div class="header__logo">
+              <h1 class="header__title fade-text text-xl md:text-2xl lg:text-4xl font-extrabold font-bubblegum">
+                Khalid Raja
+              </h1>
+              <div class="header__subtitle-wrapper" aria-label="Professional roles">
+                <span
+                  class="header__subtitle fade-text text-2xl md:text-3xl lg:text-4xl font-extrabold font-bubblegum text-blue-800 text">I'm
+                  Designer</span>
+                <span
+                  class="header__subtitle fade-text text-2xl md:text-3xl lg:text-4xl font-extrabold font-bubblegum text-blue-800 text">I'm
+                  Developer</span>
+                <span
+                  class="header__subtitle fade-text text-2xl md:text-3xl lg:text-4xl font-extrabold font-bubblegum text-blue-800 text">I'm
+                  Freelancer</span>
               </div>
             </div>
 
-          </div>
-          <div
-            class="skill-box dark  flex flex-col items-center gap-4 bg-white py-4 rounded-lg animate__animated  animate-on-scroll"
-            data-animate="animate__fadeInUp">
 
-            <p class="skill-head text-xl font-medium text-blue-300">Frameworks & Libraries </p>
-            <div class="skill-item-box flex gap-x-2 gap-y-4 flex-wrap justify-center">
-              <div class="skill-items flex gap-2 px-8 items-center flex-col">
-                <img src="./images/tailwind-css.jpg" alt="tailwind-css" height="70" width="70"
-                  class="transition-all duration-300 ease-in-out rounded-full"> <span class="skill-name">Tailwind Css</span>
-              </div>
-
-              <div class="skill-items flex gap-3 px-8 items-center flex-col">
-                <img src="./images/bootstrap.jpg" alt="bootstrap" height="70" width="70"
-                  class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span
-                  class="skill-name">Bootstrap Css</span>
-              </div>
-              <div class="skill-items flex gap-3 px-8 items-center flex-col">
-                <img src="./images/react.webp" alt="react-img" height="70" width="70"
-                  class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span class="skill-name">React.js</span>
-              </div>
-              <div class="skill-items flex gap-3 px-8 items-center flex-col">
-                <img src="./images/node.png" alt="node-img" height="70" width="70"
-                  class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span
-                  class="skill-name">Node.js</span>
-              </div>
-
-                <div class="skill-items flex gap-3 px-8 items-center flex-col">
-                <img src="./images/scss.jpg" alt="scss-img" height="70" width="70"
-                  class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span
-                  class="skill-name">Scss</span>
-              </div>
+            <div class="theme-selection ms-36">
+              <button id="theme-toggle" aria-label="Toggle dark mode"
+                class="w-12 h-12 px-4 py-2 inline-flex items-center relative z-50 border border-yellow-500 bg-blue-600 rounded-full transition-all duration-300 ease-in-out">
+                <i class="fa-solid fa-moon  text-2xl text-start absolute right-2 top-1/4" aria-hidden="true"
+                  style="color: #ffffff;"></i>
+                <i class="absolute fa-solid  fa-sun text-yellow-500 text-2xl text-start left-2 top-1/4 invisible"
+                  aria-hidden="true"></i>
+              </button>
             </div>
 
-          </div>
-         <div
-            class="skill-box dark  flex flex-col items-center gap-4 bg-white py-4 rounded-lg animate__animated  animate-on-scroll"
-            data-animate="animate__fadeInUp">
+            <button class="header__menu-toggle md:hidden block p-2" id="menu-toggle" aria-expanded="false"
+              aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+              <span class="header__menu-icon header__menu-icon--open" id="menu-open">
+                <i class="fa-solid fa-bars text-blue-900 text-2xl" aria-hidden="true"></i>
+              </span>
+              <span class="header__menu-icon header__menu-icon--close" id="menu-close" style="display: none;">
+                <i class="fa-solid fa-xmark text-blue-900 text-2xl" aria-hidden="true"></i>
+              </span>
+            </button>
 
-            <p class="skill-head text-xl font-medium text-blue-300">Tools & Platforms</p>
-            <div class="skill-item-box flex gap-x-2 gap-y-4 flex-wrap justify-center">
-              <div class="skill-items flex gap-2 px-8 items-center flex-col">
-                <img src="./images/vs-code.jpg" alt="vs-code-img" height="70" width="70"
-                  class="transition-all duration-300 ease-in-out rounded-full"> <span class="skill-name">VS Code</span>
-              </div>
-
-              <div class="skill-items flex gap-3 px-8 items-center flex-col">
-                <img src="./images/figma.avif" alt="figma-img" height="70" width="70"
-                  class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span
-                  class="skill-name">Figma</span>
-              </div>
-              <div class="skill-items flex gap-3 px-8 items-center flex-col">
-                <img src="./images/canva.jpeg" alt="Canva-img" height="70" width="70"
-                  class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span class="skill-name">Canva</span>
-              </div>
-              <div class="skill-items flex gap-3 px-8 items-center flex-col">
-                <img src="./images/git.jpg" alt="git-img" height="70" width="70"
-                  class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span
-                  class="skill-name">Git</span>
-              </div>
-
-                <div class="skill-items flex gap-3 px-8 items-center flex-col">
-                <img src="./images/github.jpg" alt="Github-img" height="70" width="70"
-                  class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span
-                  class="skill-name">Github</span>
-              </div>
-            </div>
-
-          </div>
-       
-        </div>
-      </div>
-    </section>
-
-    <!-- project section -->
-    <section id="projects" class="section section_dark projects py-20 bg-linear-to-tl from-blue-200 to-blue-500  ">
-      <h3 class="text-3xl  md:text-4xl lg:text-5xl font-bold text-white text-center mb-8 ">
-        Projects
-      </h3>
-      <div class="container mx-auto p-10">
-        <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-3 gap-y-6">
-          <!-- Projects will be dynamically generated here -->
-        </div>
-      </div>
-    </section>
-
-    <!-- contacts section -->
-    <section id="contacts" class="section section_dark contact-section py-20 relative overflow-hidden">
-      <div
-        class=" absolute top-3/4  left-1/2 rounded-3xl transform -translate-x-1/2 -translate-y-1/2  h-160 w-160 bg-blue-200 opacity-10 -z-60 rotate-45">
-      </div>
-      <div
-        class=" absolute top-3/4  left-1/2 rounded-3xl transform -translate-x-1/2 -translate-y-1/2  h-120 w-120 bg-blue-400 opacity-15 -z-50 rotate-90 backdrop-blur-lg ">
-      </div>
-      <div
-        class=" absolute top-3/4  left-1/2 rounded-3xl transform -translate-x-1/2 -translate-y-1/2 h-80 w-80 bg-blue-400 opacity-15 -z-40 rotate-45 backdrop-blur-lg ">
-      </div>
-      <div
-        class=" absolute top-3/4  left-1/2 rounded-2xl transform -translate-x-1/2 -translate-y-1/2 h-40 w-40 bg-blue-400 opacity-25 -z-50 rotate-90 backdrop-blur-lg ">
-      </div>
-      <div
-        class=" absolute top-3/4  left-1/2 rounded-3xl transform -translate-x-1/2 -translate-y-1/2 h-20 w-20 bg-blue-400 opacity-35 -z-50 rotate-45 backdrop-blur-lg ">
-      </div>
-
-      <h3 class="text-3xl  md:text-4xl lg:text-5xl font-bold text-blue-800 text-center mb-8">
-        Connect With Me
-      </h3>
-      <div class="container mx-auto p-10">
-        <div class="contact-wrapper grid grid-cols-1 lg:grid-cols-2 gap-y-10  ">
-          <div class="personal-info flex flex-col items-start gap-5">
-            <h4 class="text-2xl font-bold text-blue-600">
-              Get In Touch With Me
-            </h4>
-            <div class="info-box flex justify-between gap-4 items-center">
-              <a
-                href="https://mail.google.com/mail/?view=cm&to=khalidraza30565@gmail.com&su=Query Request&body=Hello,%0AI would like to connect with you.%0APlease let me know your availability.%0A%0ARegards,%0A[[Your Name]">
-                <i
-                  class="fa-solid fa-envelope text-blue-600 text-xl border border-blue-600 py-4 px-5 rounded-full cursor-pointer hover:scale-90 transition-transform duration-300"></i>
-              </a>
-              <div>
-                <h5 class="text-lg font-bold text-blue-800 ">Email</h5>
-                <p>Khalidraza30565@gmail.com</p>
-              </div>
-            </div>
-            <div class="info-box flex justify-between gap-4 items-center">
-              <a href="tel:+919563751684"> <i
-                  class="fa-solid fa-phone-alt text-blue-600 text-xl border border-blue-600 py-4 px-5 rounded-full cursor-pointer hover:scale-90 transition-transform duration-300"></i></a>
-              <div>
-                <h5 class="text-lg font-bold text-blue-800">Phone</h5>
-                <p>+91 9563751684</p>
-              </div>
-            </div>
-            <div class="info-box flex justify-between gap-4 items-center">
-              <a
-                href="https://www.google.com/maps/place/Jaipur,+Rajasthan/@26.8854214,75.6257446,11z/data=!3m1!4b1!4m6!3m5!1s0x396c4adf4c57e281:0xce1c63a0cf22e09!8m2!3d26.9124336!4d75.7872709!16zL20vMDE2NzIy?authuser=0&entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D">
-                <i
-                  class="fa-solid fa-map-marker-alt text-blue-600 text-xl border border-blue-600 py-4 px-5 rounded-full cursor-pointer hover:scale-90 transition-transform duration-300"></i></a>
-              <div>
-                <h5 class="text-lg font-bold text-blue-800">Address</h5>
-                <p>Jaipur, Rajasthan</p>
-              </div>
-            </div>
-            <ul class="flex gap-10 ">
-              <li>
-                <a target="_blank" href="https://www.linkedin.com/in/khalid-raja-0aa797187"><i
-                    class="fa-brands text-xl fa-linkedin-in text-white bg-blue-600 py-4 px-5 rounded-full border border-blue-600 hover:bg-white hover:text-blue-600 transition-all duration-300"></i></a>
+            <ul class="header__nav-list gap-x-8 hidden md:flex" role="list">
+              <li class="header__nav-item">
+                <a href="#home" class="header__nav-link nav-link text-md md:text-xl font-semibold text-blue-800 text"
+                  aria-current="page">Home</a>
               </li>
-              <li>
-                <a target="_blank" href="#"><i
-                    class="fa-brands text-xl fa-facebook text-white bg-blue-600 py-4 px-5 rounded-full border border-blue-600 hover:bg-white hover:text-blue-600 transition-all duration-300"></i></a>
+              <li class="header__nav-item">
+                <a href="#about"
+                  class="header__nav-link nav-link text-md md:text-xl font-semibold text-blue-800 text">About</a>
               </li>
-              <li>
-                <a target="_blank" href="#"><i
-                    class="fa-brands text-xl fa-instagram text-white bg-blue-600 py-4 px-5 rounded-full border border-blue-600 hover:bg-white hover:text-blue-600 transition-all duration-300"></i></a>
+              <li class="header__nav-item">
+                <a href="#skills"
+                  class="header__nav-link nav-link text-md md:text-xl font-semibold text-blue-800 text">Skills</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#projects"
+                  class="header__nav-link nav-link text-md md:text-xl font-semibold text-blue-800 text">Projects</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#contacts"
+                  class="header__nav-link nav-link text-md md:text-xl font-semibold text-blue-800 text">Contact</a>
               </li>
             </ul>
 
           </div>
-          <div class="contact-form flex flex-col gap-4">
-            <form id="myForm" class="flex flex-col gap-4" onsubmit="return validateForm()">
-              <div class="flex flex-col gap-2">
-                <label for="user_name" class="text-xl font-bold text-blue-600 text">
-                  Name
-                </label>
-                <input type="text" id="user_name" name="user_name"
-                  class="w-full px-4 py-2 border border-blue-300 rounded-md focus:outline-none focus:border-blue-600 bg-white text-black"
-                  required>
-              </div>
-              <div class="flex flex-col gap-2">
-                <label for="email" class="text-lg font-bold text-blue-600 text">
-                  Email
-                </label>
-                <input type="email" id="email" name="email"
-                  class="w-full px-4 py-2 border border-blue-300 bg-white rounded-md focus:outline-none focus:border-blue-600 text-black"
-                  required>
-              </div>
-              <div class="flex flex-col gap-2">
-                <label for="msg" class="text-lg font-bold text-blue-600 text">
-                  Message
-                </label>
-                <textarea id="msg" name="msg"
-                  class="w-full px-4 py-2 border border-blue-300 rounded-md focus:outline-none bg-white focus:border-blue-600 h-32 text-black"
-                  required></textarea>
-              </div>
-              <button type="submit" class="sendbtn text-xl px-4 py-3 rounded-lg bg-blue-800 text-white hover:bg-blue-200 hover:text-blue-800 transition-all duration-300 border border-blue-800">
-                Submit
-              </button>
-            </form>
+
+        </div>
+      </nav>
+    </header>
+
+
+
+    <main id="main-content" class="portfolio">
+
+      <!-- hero section -->
+      <section id="home" class="hero-section relative py-20" aria-labelledby="hero-heading">
+        <span
+          class="circle-1 hidden lg:block absolute h-32 w-32 rounded-full  bg-blue-200 z-20 p-5 left-28 top-30"></span>
+        <span
+          class="circle-2 hidden lg:block absolute h-10 w-10 rounded-full  bg-blue-800 opacity-35 z-10 p-5 left-20 top-16"></span>
+        <span
+          class="circle-3 hidden lg:block absolute h-20 w-20 rounded-full  bg-blue-500 z-20 p-5 opacity-35 left-24 top-20"></span>
+        <div class="container mx-auto p-10 mt-5">
+          <div
+            class="hero-section-wrapper flex justify-around lg:flex-row flex-col-reverse gap-5 sm:gap-10 items-center">
+            <div class="left relative flex flex-col gap-5 justify-center">
+              <a class="my-git" target="_blank" href="https://github.com/khalid-raza03/"><i
+                  class="fa-brands fa-github text-3xl md:text-4xl"></i></a>
+              <p class="text-2xl sm:text-4xl font-semibold text-blue-800 font-bubblegum">
+                I am
+              </p>
+              <p class="text-3xl sm:text-6xl font-bold text-blue-600 font-bubblegum">
+                Khalid Raja
+              </p>
+              <p class="text-lg sm:text-xl font-semibold italic text-blue-800 font-bubblegum">
+                A frontend developer and designer
+              </p>
+              <a href="#contacts"
+                class="bg-gradient-to-bl from-white to-blue-600 hover:from-white hover:to-white hover:text-blue-400 hover:border-blue-600 text-center font-bold px-6 py-3 hover:scale-95 rounded-lg shadow-md border-2  transition-all duration-300 text-blue-800 text-xl">Contact
+                me</a>
+            </div>
+
+            <div class="my-img-box max-w-sm rounded-3xl relative">
+              <span
+                class="my-pic-cover hidden sm:block absolute h-10 w-full -z-10 bg-blue-600 opacity-55 -rotate-45 -left-32 top-24 "></span>
+              <span
+                class="my-pic-cover hidden sm:block absolute h-10 w-full -z-10 bg-blue-600 opacity-55 rotate-45 -left-32 bottom-20 "></span>
+              <span
+                class="my-pic-cover hidden sm:block absolute h-10 w-full -z-10 bg-blue-600 opacity-55 rotate-45 -right-32 top-24 "></span>
+              <span
+                class="my-pic-cover hidden sm:block absolute h-10 w-full -z-10 bg-blue-600 opacity-55 -rotate-45 -right-32 bottom-20 "></span>
+              <img src="./images/my-formal-pic.jpg" class="my_pic relative z-10 object-cover rounded-3xl"
+                alt="Khalid Raja - Frontend Developer and Designer professional photo">
+            </div>
+
           </div>
         </div>
+        <span
+          class="circle-1 absolute h-32 w-32 rounded-full bg-blue-200 z-20 p-5 left-1/2 bottom-1 hidden xl:block"></span>
+        <span
+          class="circle-2 absolute h-10 w-10 rounded-full bg-blue-800 opacity-35 z-10 p-5 left-1/2 bottom-32 hidden xl:block"></span>
+        <span
+          class="circle-3 absolute h-20 w-20 rounded-full bg-blue-500 z-20 p-5 opacity-35 left-1/2 bottom-20 hidden xl:block"></span>
+
+        <div
+          class="move-scale absolute bottom-12 left-16 rotate-45 h-52 w-52 bg-gradient-to-bl from-white to-blue-300 -z-10 hidden lg:block">
+        </div>
+      </section>
+
+      <!-- about section -->
+      <section id="about" class="section section_dark about py-20 " aria-labelledby="about-heading">
+        <div class="about__container container mx-auto p-10">
+          <h2 id="about-heading"
+            class="about__title text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-8">
+            About Me
+          </h2>
+          <div class="flex justify-around gap-10 lg:flex-row flex-col-reverse items-center ">
+            <div class="flex flex-col gap-2">
+              <p class="text-lg text-white text-justify mb-3 max-w-xl font-serif tracking-wider italic ">
+                I’m Khalid Raja, a 23-year-old frontend developer and designer.
+                With a deep passion for coding, I’ve dedicated myself to building user-friendly websites and
+                applications
+                with creativity and attention to detail. My goal is to help individuals and businesses achieve their
+                objectives while creating meaningful connections with their users.
+
+                I have a strong foundation in HTML, CSS, and JavaScript, along with experience in popular frameworks
+                like
+                Tailwind CSS, Bootstrap, and the widely used JavaScript library React.js. I’m committed to continuous
+                learning and staying updated with the latest trends and technologies in the web development industry.
+
+                Currently working remotely, I’m always open to new opportunities to collaborate with talented developers
+                and designers on exciting and impactful projects.
+
+
+              </p>
+
+              <p class="text-lg font-medium text-white">Age: 23</p>
+              <p class="text-lg font-medium text-white">
+                Location: West Bengal, India
+              </p>
+              <p class="text-lg font-medium text-white">
+                Email: Khalidraza30565@gmail.com
+              </p>
+              <p class="text-lg font-medium text-white">
+                Phone: +91 9563751684
+              </p>
+            </div>
+            <div class="flex">
+              <div class="img-box p-10 max-w-2xl">
+                <img src="./images/image.png"
+                  class="rounded-lg object-cover hover:scale-95 transition-all duration-300 w-100" alt />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- skill section -->
+      <section id="skills" class="section section_dark my-skills py-20 bg-blue-100  ">
+        <h3 class="text-3xl  md:text-4xl lg:text-5xl font-bold text-blue-800 text-center mb-8 ">
+          Technical Skills
+        </h3>
+
+        <div class="container mx-auto p-10">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-3 gap-y-6 justify-items-center xl:justify-items-stretch">
+            <div
+              class="skill-box dark  flex flex-col items-center gap-4 bg-white py-4 rounded-lg animate__animated  animate-on-scroll"
+              data-animate="animate__fadeInUp">
+
+              <p class="skill-head text-xl font-medium text-blue-300">LANGUAGES </p>
+              <div class="skill-item-box flex gap-x-2 gap-y-4 flex-wrap justify-center">
+                <div class="skill-items flex gap-2 px-8 items-center flex-col">
+                  <img src="./images/html.png" alt="html-img" height="70" width="70"
+                    class="transition-all duration-300 ease-in-out rounded-full"> <span class="skill-name">HTML5</span>
+                </div>
+
+                <div class="skill-items flex gap-3 px-8 items-center flex-col">
+                  <img src="./images/css-img.png" alt="css-img" height="70" width="70"
+                    class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span
+                    class="skill-name">CSS3</span>
+                </div>
+                <div class="skill-items flex gap-3 px-8 items-center flex-col">
+                  <img src="./images/js.png" alt="JavaScript-img" height="70" width="70"
+                    class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span
+                    class="skill-name">Js
+                    (ES6+)</span>
+                </div>
+                <div class="skill-items flex gap-3 px-8 items-center flex-col">
+                  <img src="./images/cpp.png" alt="cpp-img" height="70" width="70"
+                    class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span
+                    class="skill-name">C++</span>
+                </div>
+
+                <div class="skill-items flex gap-3 px-8 items-center flex-col">
+                  <img src="./images/python.webp" alt="python-img" height="70" width="70"
+                    class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span
+                    class="skill-name">Python</span>
+                </div>
+              </div>
+
+            </div>
+            <div
+              class="skill-box dark  flex flex-col items-center gap-4 bg-white py-4 rounded-lg animate__animated  animate-on-scroll"
+              data-animate="animate__fadeInUp">
+
+              <p class="skill-head text-xl font-medium text-blue-300">Frameworks & Libraries </p>
+              <div class="skill-item-box flex gap-x-2 gap-y-4 flex-wrap justify-center">
+                <div class="skill-items flex gap-2 px-8 items-center flex-col">
+                  <img src="./images/tailwind-css.jpg" alt="tailwind-css" height="70" width="70"
+                    class="transition-all duration-300 ease-in-out rounded-full"> <span class="skill-name">Tailwind
+                    Css</span>
+                </div>
+
+                <div class="skill-items flex gap-3 px-8 items-center flex-col">
+                  <img src="./images/bootstrap.jpg" alt="bootstrap" height="70" width="70"
+                    class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span
+                    class="skill-name">Bootstrap Css</span>
+                </div>
+                <div class="skill-items flex gap-3 px-8 items-center flex-col">
+                  <img src="./images/react.webp" alt="react-img" height="70" width="70"
+                    class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span
+                    class="skill-name">React.js</span>
+                </div>
+                <div class="skill-items flex gap-3 px-8 items-center flex-col">
+                  <img src="./images/node.png" alt="node-img" height="70" width="70"
+                    class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span
+                    class="skill-name">Node.js</span>
+                </div>
+
+                <div class="skill-items flex gap-3 px-8 items-center flex-col">
+                  <img src="./images/scss.jpg" alt="scss-img" height="70" width="70"
+                    class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span
+                    class="skill-name">Scss</span>
+                </div>
+              </div>
+
+            </div>
+            <div
+              class="skill-box dark  flex flex-col items-center gap-4 bg-white py-4 rounded-lg animate__animated  animate-on-scroll"
+              data-animate="animate__fadeInUp">
+
+              <p class="skill-head text-xl font-medium text-blue-300">Tools & Platforms</p>
+              <div class="skill-item-box flex gap-x-2 gap-y-4 flex-wrap justify-center">
+                <div class="skill-items flex gap-2 px-8 items-center flex-col">
+                  <img src="./images/vs-code.jpg" alt="vs-code-img" height="70" width="70"
+                    class="transition-all duration-300 ease-in-out rounded-full"> <span class="skill-name">VS
+                    Code</span>
+                </div>
+
+                <div class="skill-items flex gap-3 px-8 items-center flex-col">
+                  <img src="./images/figma.avif" alt="figma-img" height="70" width="70"
+                    class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span
+                    class="skill-name">Figma</span>
+                </div>
+                <div class="skill-items flex gap-3 px-8 items-center flex-col">
+                  <img src="./images/canva.jpeg" alt="Canva-img" height="70" width="70"
+                    class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span
+                    class="skill-name">Canva</span>
+                </div>
+                <div class="skill-items flex gap-3 px-8 items-center flex-col">
+                  <img src="./images/git.jpg" alt="git-img" height="70" width="70"
+                    class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span
+                    class="skill-name">Git</span>
+                </div>
+
+                <div class="skill-items flex gap-3 px-8 items-center flex-col">
+                  <img src="./images/github.jpg" alt="Github-img" height="70" width="70"
+                    class="transition-all duration-300 ease-in-out rounded-full bg-white p-2"> <span
+                    class="skill-name">Github</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- project section -->
+      <section id="projects" class="section section_dark projects py-20 bg-linear-to-tl from-blue-200 to-blue-500  ">
+        <h3 class="text-3xl  md:text-4xl lg:text-5xl font-bold text-white text-center mb-8 ">
+          Projects
+        </h3>
+        <div class="container mx-auto p-10">
+          <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-3 gap-y-6">
+            <!-- Projects will be dynamically generated here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- contacts section -->
+      <section id="contacts" class="section section_dark contact-section py-20 relative overflow-hidden">
+        <div
+          class=" absolute top-3/4  left-1/2 rounded-3xl transform -translate-x-1/2 -translate-y-1/2  h-160 w-160 bg-blue-200 opacity-10 -z-60 rotate-45">
+        </div>
+        <div
+          class=" absolute top-3/4  left-1/2 rounded-3xl transform -translate-x-1/2 -translate-y-1/2  h-120 w-120 bg-blue-400 opacity-15 -z-50 rotate-90 backdrop-blur-lg ">
+        </div>
+        <div
+          class=" absolute top-3/4  left-1/2 rounded-3xl transform -translate-x-1/2 -translate-y-1/2 h-80 w-80 bg-blue-400 opacity-15 -z-40 rotate-45 backdrop-blur-lg ">
+        </div>
+        <div
+          class=" absolute top-3/4  left-1/2 rounded-2xl transform -translate-x-1/2 -translate-y-1/2 h-40 w-40 bg-blue-400 opacity-25 -z-50 rotate-90 backdrop-blur-lg ">
+        </div>
+        <div
+          class=" absolute top-3/4  left-1/2 rounded-3xl transform -translate-x-1/2 -translate-y-1/2 h-20 w-20 bg-blue-400 opacity-35 -z-50 rotate-45 backdrop-blur-lg ">
+        </div>
+
+        <h3 class="text-3xl  md:text-4xl lg:text-5xl font-bold text-blue-800 text-center mb-8">
+          Connect With Me
+        </h3>
+        <div class="container mx-auto p-10">
+          <div class="contact-wrapper grid grid-cols-1 lg:grid-cols-2 gap-y-10  ">
+            <div class="personal-info flex flex-col items-start gap-5">
+              <h4 class="text-2xl font-bold text-blue-600">
+                Get In Touch With Me
+              </h4>
+              <div class="info-box flex justify-between gap-4 items-center">
+                <a
+                  href="https://mail.google.com/mail/?view=cm&to=khalidraza30565@gmail.com&su=Query Request&body=Hello,%0AI would like to connect with you.%0APlease let me know your availability.%0A%0ARegards,%0A[[Your Name]">
+                  <i
+                    class="fa-solid fa-envelope text-blue-600 text-xl border border-blue-600 py-4 px-5 rounded-full cursor-pointer hover:scale-90 transition-transform duration-300"></i>
+                </a>
+                <div>
+                  <h5 class="text-lg font-bold text-blue-800 ">Email</h5>
+                  <p>Khalidraza30565@gmail.com</p>
+                </div>
+              </div>
+              <div class="info-box flex justify-between gap-4 items-center">
+                <a href="tel:+919563751684"> <i
+                    class="fa-solid fa-phone-alt text-blue-600 text-xl border border-blue-600 py-4 px-5 rounded-full cursor-pointer hover:scale-90 transition-transform duration-300"></i></a>
+                <div>
+                  <h5 class="text-lg font-bold text-blue-800">Phone</h5>
+                  <p>+91 9563751684</p>
+                </div>
+              </div>
+              <div class="info-box flex justify-between gap-4 items-center">
+                <a
+                  href="https://www.google.com/maps/place/Jaipur,+Rajasthan/@26.8854214,75.6257446,11z/data=!3m1!4b1!4m6!3m5!1s0x396c4adf4c57e281:0xce1c63a0cf22e09!8m2!3d26.9124336!4d75.7872709!16zL20vMDE2NzIy?authuser=0&entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D">
+                  <i
+                    class="fa-solid fa-map-marker-alt text-blue-600 text-xl border border-blue-600 py-4 px-5 rounded-full cursor-pointer hover:scale-90 transition-transform duration-300"></i></a>
+                <div>
+                  <h5 class="text-lg font-bold text-blue-800">Address</h5>
+                  <p>Jaipur, Rajasthan</p>
+                </div>
+              </div>
+              <ul class="flex gap-10 ">
+                <li>
+                  <a target="_blank" href="https://www.linkedin.com/in/khalid-raja-0aa797187"><i
+                      class="fa-brands text-xl fa-linkedin-in text-white bg-blue-600 py-4 px-5 rounded-full border border-blue-600 hover:bg-white hover:text-blue-600 transition-all duration-300"></i></a>
+                </li>
+                <li>
+                  <a target="_blank" href="#"><i
+                      class="fa-brands text-xl fa-facebook text-white bg-blue-600 py-4 px-5 rounded-full border border-blue-600 hover:bg-white hover:text-blue-600 transition-all duration-300"></i></a>
+                </li>
+                <li>
+                  <a target="_blank" href="#"><i
+                      class="fa-brands text-xl fa-instagram text-white bg-blue-600 py-4 px-5 rounded-full border border-blue-600 hover:bg-white hover:text-blue-600 transition-all duration-300"></i></a>
+                </li>
+              </ul>
+
+            </div>
+            <div class="contact-form flex flex-col gap-4">
+              <form id="myForm" class="flex flex-col gap-4" onsubmit="return validateForm()">
+                <div class="flex flex-col gap-2">
+                  <label for="user_name" class="text-xl font-bold text-blue-600 text">
+                    Name
+                  </label>
+                  <input type="text" id="user_name" name="user_name"
+                    class="w-full px-4 py-2 border border-blue-300 rounded-md focus:outline-none focus:border-blue-600 bg-white text-black"
+                    required>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label for="email" class="text-lg font-bold text-blue-600 text">
+                    Email
+                  </label>
+                  <input type="email" id="email" name="email"
+                    class="w-full px-4 py-2 border border-blue-300 bg-white rounded-md focus:outline-none focus:border-blue-600 text-black"
+                    required>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label for="msg" class="text-lg font-bold text-blue-600 text">
+                    Message
+                  </label>
+                  <textarea id="msg" name="msg"
+                    class="w-full px-4 py-2 border border-blue-300 rounded-md focus:outline-none bg-white focus:border-blue-600 h-32 text-black"
+                    required></textarea>
+                </div>
+                <button type="submit"
+                  class="sendbtn text-xl px-4 py-3 rounded-lg bg-blue-800 text-white hover:bg-blue-200 hover:text-blue-800 transition-all duration-300 border border-blue-800">
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="section section_dark bg-blue-800 py-6 flex justify-center">
+        <p class="footer-txt text-center text-white ">&nbsp; © <span id="year"></span> Khalid Raja. All rights reserved.
+          &nbsp;</p>
       </div>
-
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="section section_dark bg-blue-800 py-6 flex justify-center">
-      <p class="footer-txt text-center text-white ">&nbsp; © <span id="year"></span> Khalid Raja. All rights reserved. &nbsp;</p>
-    </div>
-  </footer>
+    </footer>
   </div> <!-- End of content div -->
-  
+
   <!-- Custom Popup -->
-   <div id="custom-popup" class="flex-column  items-center justify-center" style="display: none;">
+  <div id="custom-popup" class="flex-column  items-center justify-center" style="display: none;">
     <div id="popup-message"></div>
     <div class="socials flex gap-3 flex-col justify-center pt-2">
-      <p class="sm:text-lg text-lg font-bold  stay-connected">Stay Connected</p> 
+      <p class="sm:text-lg text-lg font-bold  stay-connected">Stay Connected</p>
       <div class="icons-box flex gap-5 justify-center">
-         <a href="http://linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin text-[#0A66C2] text-2xl"></i></a>
-      <a href="http://instagram.com" target="_blank" rel="noopener noreferrer"> <i class="text-2xl fa-brands fa-instagram text-[#E4405F]"></i></a>
-      <a href="http://github.com" target="_blank" rel="noopener noreferrer"><i class="text-2xl fa-brands fa-github text-[#181717]"></i></a>
+        <a href="http://linkedin.com" target="_blank" rel="noopener noreferrer"><i
+            class="fa-brands fa-linkedin text-[#0A66C2] text-2xl"></i></a>
+        <a href="http://instagram.com" target="_blank" rel="noopener noreferrer"> <i
+            class="text-2xl fa-brands fa-instagram text-[#E4405F]"></i></a>
+        <a href="http://github.com" target="_blank" rel="noopener noreferrer"><i
+            class="text-2xl fa-brands fa-github text-[#181717]"></i></a>
       </div>
-     
+
     </div>
     <button onclick="closePopUp()" class="popup-close-btn px-4 py-2 mt-3 text-white rounded-lg">
       Close
     </button>
   </div>
-  
-  
+
+
 
   <script>
     function validateForm() {
       const name = document.getElementById('user_name').value.trim();
       const email = document.getElementById('email').value.trim();
       const message = document.getElementById('msg').value.trim();
-      
+
       if (!name || !email || !message) {
         alert('Please fill in all fields');
         return false;
       }
-      
+
       return true;
     }
   </script>
