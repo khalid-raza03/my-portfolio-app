@@ -13,64 +13,92 @@ const observer = new IntersectionObserver(
   }
 );
 
-document.querySelectorAll(".animate-on-scroll").forEach((elem) => {
-  observer.observe(elem);
-});
+// DOM Content Loaded
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll(".animate-on-scroll").forEach((elem) => {
+    observer.observe(elem);
+  });
 
-// mobile menu toggle
+  // mobile menu toggle
+  const menuToggle = document.querySelector(".header__menu-toggle");
+  const menuOpenIcon = document.querySelector("#menu-open");
+  const menuCloseIcon = document.querySelector("#menu-close");
+  const mobileMenu = document.querySelector(".header__mobile-menu");
 
-const menuToggle = document.querySelector(".header__menu-toggle");
-const menuOpenIcon = document.querySelector("#menu-open");
-const menuCloseIcon = document.querySelector("#menu-close");
-const mobileMenu = document.querySelector(".header__mobile-menu");
-
-menuToggle.addEventListener("click", () => {
-  if (mobileMenu.classList.contains("show")) {
-    // Close menu
-    menuOpenIcon.style.display = "block";
-    menuCloseIcon.style.display = "none";
-    mobileMenu.classList.remove("show");
-  } else {
-    // Open menu
-    menuOpenIcon.style.display = "none";
-    menuCloseIcon.style.display = "block";
-    mobileMenu.classList.add("show");
+  if (menuToggle && menuOpenIcon && menuCloseIcon && mobileMenu) {
+    menuToggle.addEventListener("click", () => {
+      if (mobileMenu.classList.contains("show")) {
+        // Close menu
+        menuOpenIcon.style.display = "block";
+        menuCloseIcon.style.display = "none";
+        mobileMenu.classList.remove("show");
+      } else {
+        // Open menu
+        menuOpenIcon.style.display = "none";
+        menuCloseIcon.style.display = "block";
+        mobileMenu.classList.add("show");
+      }
+    });
   }
+
+  // dark mode toggle
+  const themeToggleBtn = document.getElementById("theme-toggle");
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener("click", () => {
+      themeToggleBtn.classList.toggle("dark");
+      document.querySelector(".fa-moon")?.classList.toggle("invisible");
+      document.querySelector(".fa-sun")?.classList.toggle("invisible");
+
+      document.body.classList.toggle("body_dark");
+      document.body.classList.toggle("text");
+      document.querySelector("header")?.classList.toggle("header_dark");
+      
+      document.querySelectorAll(".section").forEach(section => {
+        section.classList.toggle("section_dark");
+      });
+
+      document.querySelectorAll(".skill-box").forEach(section => {
+        section.classList.toggle("dark");
+      });
+    });
+  }
+
+  //latest year
+  const yearElement = document.getElementById("year");
+  if (yearElement) {
+    yearElement.innerHTML = new Date().getFullYear();
+  }
+
+  // Generate projects on page load
+  generateProjects();
 });
 
 // hide show scroll to top button
 document.addEventListener("DOMContentLoaded", function () {
   const mybutton = document.getElementById("ScrollToTopBtn");
 
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 200) {
-      mybutton.classList.remove("hidden");
-    } else {
-      mybutton.classList.add("hidden");
+  if (mybutton) {
+    let ticking = false;
+    
+    function updateButton() {
+      if (window.scrollY > 200) {
+        mybutton.classList.remove("hidden");
+      } else {
+        mybutton.classList.add("hidden");
+      }
+      ticking = false;
     }
-  });
+    
+    window.addEventListener("scroll", function () {
+      if (!ticking) {
+        requestAnimationFrame(updateButton);
+        ticking = true;
+      }
+    });
+  }
 });
 
-// dark mode toggle
-const themeToggleBtn = document.getElementById("theme-toggle");
-themeToggleBtn.addEventListener("click", () => {
-  themeToggleBtn.classList.toggle("dark");
-  document.querySelector(".fa-moon").classList.toggle("invisible");
-  document.querySelector(".fa-sun").classList.toggle("invisible");
 
-
-  document.body.classList.toggle("body_dark");
-  document.body.classList.toggle("text");
-  document.querySelector("header").classList.toggle("header_dark");
-  
-  document.querySelectorAll(".section").forEach(section => {
-    section.classList.toggle("section_dark");
-  });
-
-   document.querySelectorAll(".skill-box").forEach(section => {
-    section.classList.toggle("dark");
-  });
-});
 
 
 //spinner script
@@ -81,9 +109,6 @@ themeToggleBtn.addEventListener("click", () => {
       document.getElementById("content").style.display = "block";
     }, 1000);
   });
-
-  //latest year
-  document.getElementById("year").innerHTML = new Date().getFullYear();
 
   // Projects data
   const projectsData = [
@@ -159,7 +184,7 @@ themeToggleBtn.addEventListener("click", () => {
             </a>
           </div>
           <div class="img-box h-full">
-            <img src="${project.image}" alt="${project.title}" class="object-cover aspect-[2/1] w-full h-full" />
+            <img src="${project.image}" alt="${project.title}" class="object-cover aspect-2/1 w-full h-full" />
           </div>
           <div class="project-info flex flex-col gap-4 w-full items-center rounded-bl-xl rounded-br-xl">
             <h4 class="text-lg md:text-2xl font-bold text-white text-center">${project.title}</h4>
@@ -177,9 +202,6 @@ themeToggleBtn.addEventListener("click", () => {
       observer.observe(elem);
     });
   }
-
-  // Generate projects on page load
-  generateProjects();
 
   // form data export to excel sheet
 

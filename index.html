@@ -8,6 +8,7 @@
   <title>Khalid Raja - Frontend Developer Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="./dist/output.css">
   <link rel="stylesheet" href="./styles.css">
   
 </head>
@@ -30,7 +31,7 @@
   <header class="header header_dark shadow-lg w-full sticky top-0" style="z-index: 999; background-color: #fff;">
     <!-- mobile menu -->
     <div
-      class="header__mobile-menu absolute -left-1/4 -top-1/3 sm:hidden h-96 w-96 rounded-full bg-blue-600/75 flex items-center justify-center"
+      class="header__mobile-menu absolute -left-1/4 -top-1/3 sm:hidden  rounded-full bg-blue-600/75 flex items-center justify-center"
       id="mobile-menu" aria-hidden="true">
       <ul class="header__mobile-list flex flex-col gap-5" role="list">
         <li class="header__mobile-item">
@@ -65,7 +66,7 @@
             class="header__decoration header__decoration--circle-1 animate__animated animate__bounce absolute h-40 w-40 rounded-full bg-blue-800 opacity-35 p-5 left-3 top-12 sm:top-6 invisible sm:visible"
             aria-hidden="true"></span>
           <span
-            class="header__decoration header__decoration--circle-2 absolute h-40 w-40 rotate-[135deg] bg-blue-800 opacity-55 p-5 -right-7 sm:right-0 top-20 invisible sm:visible"
+            class="header__decoration header__decoration--circle-2 absolute h-40 w-40 rotate-135 bg-blue-800 opacity-55 p-5 -right-7 sm:right-0 top-20 invisible sm:visible"
             aria-hidden="true"></span>
           <span
             class="header__decoration header__decoration--circle-3 animate__animated animate__bounce absolute h-96 w-96 rounded-full bg-blue-800 opacity-40 p-5 left-5 sm:left-1/4 bottom-5 invisible sm:visible"
@@ -164,7 +165,7 @@
               A frontend developer and designer
             </p>
             <a href="#contacts"
-              class="bg-gradient-to-bl from-white to-blue-600 hover:from-white hover:to-white hover:text-blue-400 hover:border-blue-600 text-center font-bold px-6 py-3 hover:scale-95 rounded-lg shadow-md border-2  transition-all duration-300 text-blue-800 text-xl">Contact
+              class="bg-linear-to-bl from-white to-blue-600 hover:from-white hover:to-white hover:text-blue-400 hover:border-blue-600 text-center font-bold px-6 py-3 hover:scale-95 rounded-lg shadow-md border-2  transition-all duration-300 text-blue-800 text-xl">Contact
               me</a>
           </div>
 
@@ -191,7 +192,7 @@
         class="circle-3 absolute h-20 w-20 rounded-full bg-blue-500 z-20 p-5 opacity-35 left-1/2 bottom-20 hidden xl:block"></span>
 
       <div
-        class="move-scale absolute bottom-12 left-16 rotate-45 h-52 w-52 bg-gradient-to-bl from-white to-blue-300 -z-10 hidden lg:block">
+        class="move-scale absolute bottom-12 left-16 rotate-45 h-52 w-52 bg-linear-to-bl from-white to-blue-300 -z-10 hidden lg:block">
       </div>
     </section>
 
@@ -358,7 +359,7 @@
     </section>
 
     <!-- project section -->
-    <section id="projects" class="section section_dark projects py-20 bg-gradient-to-tl from-blue-200 to-blue-500  ">
+    <section id="projects" class="section section_dark projects py-20 bg-linear-to-tl from-blue-200 to-blue-500  ">
       <h3 class="text-3xl  md:text-4xl lg:text-5xl font-bold text-white text-center mb-8 ">
         Projects
       </h3>
@@ -372,19 +373,19 @@
     <!-- contacts section -->
     <section id="contacts" class="section section_dark contact-section py-20 relative overflow-hidden">
       <div
-        class=" absolute top-3/4  left-1/2 rounded-3xl transform -translate-x-1/2 -translate-y-1/2  h-[40rem] w-[40rem] bg-blue-200 opacity-10 -z-60 rotate-45">
+        class=" absolute top-3/4  left-1/2 rounded-3xl transform -translate-x-1/2 -translate-y-1/2  h-160 w-160 bg-blue-200 opacity-10 -z-60 rotate-45">
       </div>
       <div
-        class=" absolute top-3/4  left-1/2 rounded-3xl transform -translate-x-1/2 -translate-y-1/2  h-[30rem] w-[30rem] bg-blue-400 opacity-15 -z-50 rotate-90 backdrop-blur-lg ">
+        class=" absolute top-3/4  left-1/2 rounded-3xl transform -translate-x-1/2 -translate-y-1/2  h-120 w-120 bg-blue-400 opacity-15 -z-50 rotate-90 backdrop-blur-lg ">
       </div>
       <div
-        class=" absolute top-3/4  left-1/2 rounded-3xl transform -translate-x-1/2 -translate-y-1/2 h-[20rem] w-[20rem] bg-blue-400 opacity-15 -z-40 rotate-45 backdrop-blur-lg ">
+        class=" absolute top-3/4  left-1/2 rounded-3xl transform -translate-x-1/2 -translate-y-1/2 h-80 w-80 bg-blue-400 opacity-15 -z-40 rotate-45 backdrop-blur-lg ">
       </div>
       <div
-        class=" absolute top-3/4  left-1/2 rounded-2xl transform -translate-x-1/2 -translate-y-1/2 h-[10rem] w-[10rem] bg-blue-400 opacity-25 -z-50 rotate-90 backdrop-blur-lg ">
+        class=" absolute top-3/4  left-1/2 rounded-2xl transform -translate-x-1/2 -translate-y-1/2 h-40 w-40 bg-blue-400 opacity-25 -z-50 rotate-90 backdrop-blur-lg ">
       </div>
       <div
-        class=" absolute top-3/4  left-1/2 rounded-3xl transform -translate-x-1/2 -translate-y-1/2 h-[5rem] w-[5rem] bg-blue-400 opacity-35 -z-50 rotate-45 backdrop-blur-lg ">
+        class=" absolute top-3/4  left-1/2 rounded-3xl transform -translate-x-1/2 -translate-y-1/2 h-20 w-20 bg-blue-400 opacity-35 -z-50 rotate-45 backdrop-blur-lg ">
       </div>
 
       <h3 class="text-3xl  md:text-4xl lg:text-5xl font-bold text-blue-800 text-center mb-8">
@@ -504,7 +505,7 @@
   </div>
   
   
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
   <script>
     function validateForm() {
       const name = document.getElementById('user_name').value.trim();

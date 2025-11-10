@@ -10,10 +10,11 @@
 .mobile-nav,
 .header__mobile-menu {
   visibility: hidden;
-  opacity: 0;
+  width: 10px;
+  height: 10px;
   transform: translate(-7rem, -7rem);
   z-index: 999;
-  transition: all 0.8s cubic-bezier(0.6, 0.05, 0.795, 0.035);
+  transition: all 0.8s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 .navbar-toggler,
@@ -64,7 +65,8 @@
 .mobile-nav.show,
 .header__mobile-menu.show {
   visibility: visible !important;
-  opacity: 1 !important;
+  width: 384px;
+  height: 384px;
   transform: translate(0rem, 0rem) !important;
 }
 

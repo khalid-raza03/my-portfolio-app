@@ -1,0 +1,13 @@
+{
+  "name": "my-portfolio-app",
+  "version": "1.0.0",
+  "description": "Portfolio website",
+  "main": "index.html",
+  "scripts": {
+    "build-css": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.18"
+  }
+}
