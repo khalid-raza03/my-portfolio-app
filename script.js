@@ -86,11 +86,11 @@ document.addEventListener('DOMContentLoaded', function() {
         shape.classList.add("animate-hero-shapes" , "shadow-sm");
       });
 
-      heroSection.classList.add("pt-16");
+      heroSection.classList.add("hero-padding");
     } else {
       console.log('Elements not found for animation');
     }
-  }, 7500);
+  }, 10000);
 
   // Scroll to top button
   const mybutton = document.getElementById("ScrollToTopBtn");
@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     projectsData.forEach(project => {
       const projectHTML = `
-        <div class="project-box p-4 rounded-lg flex flex-col items-center relative animate__animated animate-on-scroll" data-animate="animate__fadeInUp">
+        <div class="project-box p-4 rounded-lg flex flex-col items-center relative animate__animated animate-on-scroll" data-animate="animate__fadeInRight">
           <div class="layer absolute w-full h-full rounded-3xl bg-blue-600 border-white border-2 flex justify-center items-center gap-5">
             <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer">
               <i class="fa-solid fa-code text-xl text-blue-600 bg-white p-10 rounded-full hover:scale-105 transition-all duration-300"></i>
