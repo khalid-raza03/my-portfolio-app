@@ -71,12 +71,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Generate projects on page load
   generateProjects();
-});
 
-// hide show scroll to top button
-document.addEventListener("DOMContentLoaded", function () {
+  // Hero image animation script
+  const myPic = document.querySelector(".my_pic");
+  const heroShapes = document.querySelectorAll(".my-pic-cover");
+  const heroSection = document.querySelector(".hero-section");
+  console.log('myPic found:', myPic);
+  console.log('heroShapes found:', heroShapes.length);
+  setTimeout(() => {
+    if (myPic && heroShapes.length > 0 && heroSection) {
+      console.log('Adding animation classes');
+      myPic.classList.add("animate-hero-image", "shadow-lg");
+      heroShapes.forEach(shape => {
+        shape.classList.add("animate-hero-shapes" , "shadow-sm");
+      });
+
+      heroSection.classList.add("pt-16");
+    } else {
+      console.log('Elements not found for animation');
+    }
+  }, 7500);
+
+  // Scroll to top button
   const mybutton = document.getElementById("ScrollToTopBtn");
-
   if (mybutton) {
     let ticking = false;
     
@@ -99,15 +116,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
-
-//spinner script
+//preloader script
 
   window.addEventListener("load", function () {
     setTimeout(() => {
       document.getElementById("preloader").style.display = "none";
       document.getElementById("content").style.display = "block";
-    }, 1000);
+    }, 600);
   });
 
   // Projects data
