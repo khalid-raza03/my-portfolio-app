@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
       console.log('Elements not found for animation');
     }
-  }, 10000);
+  }, 11000);
 
   // Scroll to top button
   const mybutton = document.getElementById("ScrollToTopBtn");

@@ -5,7 +5,7 @@
   font-family: "Bubblegum Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-display:swap;
+  font-display: swap;
 }
 
 .mobile-nav,
@@ -78,12 +78,12 @@
 
 .animate-hero-shapes {
   scale: 1.04;
-  opacity: 0.40;
+  opacity: 0.4;
   transition: all 0.8s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
-.hero-padding{
-  padding-top: 5rem !important;;
+.hero-padding {
+  padding-top: 5rem !important;
 }
 
 .about,
@@ -276,37 +276,42 @@
 .move-spread {
   animation: moveAndSpread 10s cubic-bezier(0.25, 1, 0.5, 1) forwards;
   transform-origin: center;
-  animation-delay: 0.5s;
+  animation-delay: 1s;
   animation-iteration-count: 1;
 }
 
 @keyframes moveAndSpread {
   0% {
     left: 0;
-    transform: scale(1);
+    bottom: 1%;
     opacity: 1;
-    bottom: 1%;
+    transform: scale(1);
   }
+
+
+  /* Now real movement increases */
   50% {
-    left: 95%;
-    bottom: 1%;
-    opacity: 0.5;
+    left: 97%;
+    bottom: 2%;
     transform: scale(2);
+    opacity: 0.5;
   }
-  80% {
-    left: 95%;
+
+  90% {
+    left: 97%;
     bottom: 95%;
-    transform: scale(4);
+    transform: scale(7);
     opacity: 0.25;
   }
 
   100% {
+    left: 90%;
+    bottom: 90%;
     transform: scale(10);
     opacity: 0;
-    bottom: 90%;
-    left: 90%;
   }
 }
+
 
 .my-skills {
   .skill-box {
