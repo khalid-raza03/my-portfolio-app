@@ -104,11 +104,11 @@
   top: 100%;
   background: #eeeeee;
   width: 1px;
-  height: 230px;
+  height: 280px;
   z-index: -1;
 }
 
-@media screen and (max-width: 359px) {
+@media screen and (max-width: 428px) {
   .about .company-details {
     flex-direction: column;
     row-gap: 20px;
