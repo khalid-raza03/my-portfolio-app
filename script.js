@@ -14,7 +14,7 @@ const observer = new IntersectionObserver(
 );
 
 // DOM Content Loaded
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".animate-on-scroll").forEach((elem) => {
     observer.observe(elem);
   });
@@ -52,12 +52,12 @@ document.addEventListener('DOMContentLoaded', function() {
       document.body.classList.toggle("body_dark");
       document.body.classList.toggle("text");
       document.querySelector("header")?.classList.toggle("header_dark");
-      
-      document.querySelectorAll(".section").forEach(section => {
+
+      document.querySelectorAll(".section").forEach((section) => {
         section.classList.toggle("section_dark");
       });
 
-      document.querySelectorAll(".skill-box").forEach(section => {
+      document.querySelectorAll(".skill-box").forEach((section) => {
         section.classList.toggle("dark");
       });
     });
@@ -76,19 +76,19 @@ document.addEventListener('DOMContentLoaded', function() {
   const myPic = document.querySelector(".my_pic");
   const heroShapes = document.querySelectorAll(".my-pic-cover");
   const heroSection = document.querySelector(".hero-section");
-  console.log('myPic found:', myPic);
-  console.log('heroShapes found:', heroShapes.length);
+  console.log("myPic found:", myPic);
+  console.log("heroShapes found:", heroShapes.length);
   setTimeout(() => {
     if (myPic && heroShapes.length > 0 && heroSection) {
-      console.log('Adding animation classes');
+      console.log("Adding animation classes");
       myPic.classList.add("animate-hero-image", "shadow-lg");
-      heroShapes.forEach(shape => {
-        shape.classList.add("animate-hero-shapes" , "shadow-sm");
+      heroShapes.forEach((shape) => {
+        shape.classList.add("animate-hero-shapes", "shadow-sm");
       });
 
       heroSection.classList.add("hero-padding");
     } else {
-      console.log('Elements not found for animation');
+      console.log("Elements not found for animation");
     }
   }, 11000);
 
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const mybutton = document.getElementById("ScrollToTopBtn");
   if (mybutton) {
     let ticking = false;
-    
+
     function updateButton() {
       if (window.scrollY > 200) {
         mybutton.classList.remove("hidden");
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       ticking = false;
     }
-    
+
     window.addEventListener("scroll", function () {
       if (!ticking) {
         requestAnimationFrame(updateButton);
@@ -115,80 +115,83 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-
 //preloader script
 
-  window.addEventListener("load", function () {
-    setTimeout(() => {
-      document.getElementById("preloader").style.display = "none";
-      document.getElementById("content").style.display = "block";
-    }, 600);
-  });
+window.addEventListener("load", function () {
+  setTimeout(() => {
+    document.getElementById("preloader").style.display = "none";
+    document.getElementById("content").style.display = "block";
+  }, 600);
+});
 
-  // Projects data
-  const projectsData = [
-    {
-      title: "Shop Elegance",
-      image: "./images/project-1.png",
-      githubUrl: "https://github.com/khalid-raza03/Shop-Elegance",
-      liveUrl: "https://khalid-raza03.github.io/Shop-Elegance/"
-    },
-    {
-      title: "Educational Website Template",
-      image: "./images/project-2.png",
-      githubUrl: "https://github.com/khalid-raza03/Edule-An-educational-website-template-",
-      liveUrl: "https://khalid-raza03.github.io/Edule-An-educational-website-template-/"
-    },
-    {
-      title: "Affiliate Marketing Webpage",
-      image: "./images/project-3.png",
-      githubUrl: "https://github.com/khalid-raza03/Uglow-clone",
-      liveUrl: "https://khalid-raza03.github.io/Uglow-clone/"
-    },
-    {
-      title: "Nexcent (Marketing Webpage)",
-      image: "./images/project-5.png",
-      githubUrl: "https://github.com/khalid-raza03/Nexcent",
-      liveUrl: "https://khalid-raza03.github.io/Nexcent/"
-    },
-    {
-      title: "School Exhibition Webpage",
-      image: "./images/school-exhibition-project.png",
-      githubUrl: "https://github.com/khalid-raza03/school-exhibition-landing-page",
-      liveUrl: "https://khalid-raza03.github.io/school-exhibition-landing-page/"
-    },
-    {
-      title: "E-commerce Landing Page",
-      image: "./images/project-4.png",
-      githubUrl: "https://github.com/khalid-raza03/Ubuy-HomePage-Clone",
-      liveUrl: "https://khalid-raza03.github.io/Ubuy-HomePage-Clone/"
-    },
-      {
-      title: "Todo React webapp",
-      image: "./images/todo-project.png",
-      githubUrl: "https://github.com/khalid-raza03/Daily-task-manager",
-      liveUrl: "https://daily-task-managing.netlify.app/"
-    },
-      {
-      title: "Weather forecast ",
-      image: "./images/weather-app-project.png",
-      githubUrl: "https://github.com/khalid-raza03/weather-api-webapp",
-      liveUrl: "https://khalid-raza03.github.io/weather-api-webapp/"
-    },
-      {
-      title: "Favourite music react app",
-      image: "./images/favourite-music-project.png",
-      githubUrl: "https://github.com/khalid-raza03/favourite-music-project",
-      liveUrl: "https://effervescent-kringle-f20c96.netlify.app/"
-    }
-  ];
+// Projects data
+const projectsData = [
+  {
+    title: "Notepad Webapp ",
+    image: "./images/notepad-project.png",
+    githubUrl: "https://github.com/khalid-raza03/notepad",
+    liveUrl: "https://khalid-raza03.github.io/notepad/",
+  },
+  {
+    title: "Todo React webapp",
+    image: "./images/todo-project.png",
+    githubUrl: "https://github.com/khalid-raza03/Daily-task-manager",
+    liveUrl: "https://daily-task-manager-one.vercel.app/",
+  },
+  {
+    title: "Shop Elegance",
+    image: "./images/project-1.png",
+    githubUrl: "https://github.com/khalid-raza03/Shop-Elegance",
+    liveUrl: "https://khalid-raza03.github.io/Shop-Elegance/",
+  },
+  {
+    title: "Educational Website Template",
+    image: "./images/project-2.png",
+    githubUrl:
+      "https://github.com/khalid-raza03/Edule-An-educational-website-template-",
+    liveUrl:
+      "https://khalid-raza03.github.io/Edule-An-educational-website-template-/",
+  },
+  {
+    title: "Affiliate Marketing Webpage",
+    image: "./images/project-3.png",
+    githubUrl: "https://github.com/khalid-raza03/Uglow-clone",
+    liveUrl: "https://khalid-raza03.github.io/Uglow-clone/",
+  },
+  {
+    title: "Nexcent (Marketing Webpage)",
+    image: "./images/project-5.png",
+    githubUrl: "https://github.com/khalid-raza03/Nexcent",
+    liveUrl: "https://khalid-raza03.github.io/Nexcent/",
+  },
+  {
+    title: "School Exhibition Webpage",
+    image: "./images/school-exhibition-project.png",
+    githubUrl:
+      "https://github.com/khalid-raza03/school-exhibition-landing-page",
+    liveUrl: "https://khalid-raza03.github.io/school-exhibition-landing-page/",
+  },
+  {
+    title: "E-commerce Landing Page",
+    image: "./images/project-4.png",
+    githubUrl: "https://github.com/khalid-raza03/Ubuy-HomePage-Clone",
+    liveUrl: "https://khalid-raza03.github.io/Ubuy-HomePage-Clone/",
+  },
 
-  // Generate projects dynamically
-  function generateProjects() {
-    const container = document.getElementById('projects-container');
-    
-    projectsData.forEach(project => {
-      const projectHTML = `
+  {
+    title: "Weather forecast ",
+    image: "./images/weather-app-project.png",
+    githubUrl: "https://github.com/khalid-raza03/weather-api-webapp",
+    liveUrl: "https://khalid-raza03.github.io/weather-api-webapp/",
+  },
+];
+
+// Generate projects dynamically
+function generateProjects() {
+  const container = document.getElementById("projects-container");
+
+  projectsData.forEach((project) => {
+    const projectHTML = `
         <div class="project-box p-4 rounded-lg flex flex-col items-center relative animate__animated animate-on-scroll" data-animate="animate__fadeInRight">
           <div class="layer absolute w-full h-full rounded-3xl bg-blue-600 border-white border-2 flex justify-center items-center gap-5">
             <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer">
@@ -209,28 +212,28 @@ document.addEventListener('DOMContentLoaded', function() {
           </div>
         </div>
       `;
-      container.innerHTML += projectHTML;
-    });
-    
-    // Re-observe new elements for animations
-    document.querySelectorAll(".animate-on-scroll").forEach((elem) => {
-      observer.observe(elem);
-    });
-  }
+    container.innerHTML += projectHTML;
+  });
 
-  // form data export to excel sheet
+  // Re-observe new elements for animations
+  document.querySelectorAll(".animate-on-scroll").forEach((elem) => {
+    observer.observe(elem);
+  });
+}
 
-  const GOOGLE_SCRIPT_URL =
+// form data export to excel sheet
+
+const GOOGLE_SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbz5tlY1k7kq880ZVFW9PXOjlXMwE7GfjRxHtcMhKNA3wjA74Orhre_tHLMfwbsN4HNu_g/exec";
 
 function showStatusMessage(message, type) {
   const popup = document.getElementById("custom-popup");
   const messageElement = document.getElementById("popup-message");
-  
+
   if (popup && messageElement) {
     messageElement.textContent = message;
     popup.style.display = "flex";
-    
+
     // Auto hide after 5 seconds for success messages
     if (type === "success") {
       setTimeout(() => {
@@ -281,14 +284,7 @@ async function sendToExcel(formId = "myForm") {
 
     // Debug: Log what we're sending
     console.log("Sending data to Excel:");
-    console.log(
-      "Name:",
-      name,
-      "Email:",
-      email,
-      "Message:",
-      message
-    );
+    console.log("Name:", name, "Email:", email, "Message:", message);
 
     // Send to Google Apps Script
     const response = await fetch(GOOGLE_SCRIPT_URL, {
@@ -298,7 +294,7 @@ async function sendToExcel(formId = "myForm") {
 
     // With no-cors mode, we can't read the response, so assume success
     console.log("Data sent to Google Apps Script");
-    
+
     showStatusMessage(
       `Thanks for contacting dear ${name} ,  I will reach you shortly`,
       "success"
@@ -316,16 +312,16 @@ async function sendToExcel(formId = "myForm") {
 }
 
 // Override the validateForm function to use sendToExcel
-window.validateForm = function() {
-  const name = document.getElementById('user_name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const message = document.getElementById('msg').value.trim();
-  
+window.validateForm = function () {
+  const name = document.getElementById("user_name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("msg").value.trim();
+
   if (!name || !email || !message) {
-    showStatusMessage('Please fill in all fields', 'error');
+    showStatusMessage("Please fill in all fields", "error");
     return false;
   }
-  
+
   // Call sendToExcel and prevent default form submission
   sendToExcel();
   return false;
