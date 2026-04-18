@@ -10,7 +10,7 @@ const observer = new IntersectionObserver(
   },
   {
     threshold: 0.1,
-  }
+  },
 );
 
 // DOM Content Loaded
@@ -72,6 +72,14 @@ document.addEventListener("DOMContentLoaded", function () {
   // Generate projects on page load
   generateProjects();
 
+  // Flip card
+  const flipCard = document.getElementById("flip-card");
+  if (flipCard) {
+    flipCard.addEventListener("click", () => {
+      flipCard.classList.toggle("flipped");
+    });
+  }
+
   // Hero image animation script
   const myPic = document.querySelector(".my_pic");
   const heroShapes = document.querySelectorAll(".my-pic-cover");
@@ -130,7 +138,7 @@ const projectsData = [
     title: "Notepad Webapp ",
     image: "./images/notepad-project.png",
     githubUrl: "https://github.com/khalid-raza03/notepad",
-    liveUrl: "https://khalid-raza03.github.io/notepad/",
+    liveUrl: "https://notepad-sigma-one.vercel.app/",
   },
   {
     title: "Todo React webapp",
@@ -192,7 +200,7 @@ function generateProjects() {
 
   projectsData.forEach((project) => {
     const projectHTML = `
-        <div class="project-box p-4 rounded-lg flex flex-col items-center relative animate__animated animate-on-scroll" data-animate="animate__fadeInUp">
+        <div class="project-box p-4 rounded-lg flex flex-col items-center relative ">
           <div class="layer absolute w-full h-full rounded-3xl bg-blue-600 border-white border-2 flex justify-center items-center gap-5">
             <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="bg-white py-7 px-8 rounded-full">
               <i class="fa-solid fa-code text-xl text-blue-600  hover:scale-115 transition-all duration-300"></i>
@@ -278,7 +286,7 @@ async function sendToExcel(formId = "myForm") {
     scriptFormData.append("message", message);
     scriptFormData.append(
       "page",
-      document.title || window.location.pathname || "Unknown"
+      document.title || window.location.pathname || "Unknown",
     );
     scriptFormData.append("utm_source", utmSource);
 
@@ -297,7 +305,7 @@ async function sendToExcel(formId = "myForm") {
 
     showStatusMessage(
       `Thanks for contacting dear ${name} ,  I will reach you shortly`,
-      "success"
+      "success",
     );
     form.reset();
     return true;
