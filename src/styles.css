@@ -1,0 +1,41 @@
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition:
+    color 300ms,
+    background-color 300ms,
+    border-color 300ms;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+a{
+  text-decoration: none;
+}
+
+@media screen and (max-width: 576px) {
+  .word{
+    font-size: 20px;
+  }
+}
