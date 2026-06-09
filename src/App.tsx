@@ -9,6 +9,8 @@ import SkillsPage from "./pages/SkillsPage";
 import { ThemeProvider } from "./context/ThemeContext";
 import CustomCursor from "./components/ui/CustomCursor";
 import StaggeredMenu from "./components/StaggeredMenu";
+import Preloader from "./components/Preloader";
+import Details from "./pages/Details";
 
 const menuItems = [
   { label: 'Home', ariaLabel: 'Go to home page', link: '/' },
@@ -17,25 +19,21 @@ const menuItems = [
   { label: 'Contact', ariaLabel: 'Get in touch', link: '/contact' },
 ];
 
-const socialItems = [
-  { label: 'Twitter', link: 'https://twitter.com' },
-  { label: 'GitHub', link: 'https://github.com' },
-  { label: 'LinkedIn', link: 'https://linkedin.com' },
-];
+
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <ThemeProvider>
-      {/* <CustomCursor /> */}
-      <div className="min-h-screen flex flex-col bg-[#fff8ee] text-zinc-900 transition-colors duration-300 dark:bg-zinc-950 dark:text-zinc-100">
+      <Preloader />
+      <CustomCursor />
+      <div className=" flex flex-col bg-[#fff8ee] text-zinc-900 transition-colors duration-300 dark:bg-zinc-950 dark:text-zinc-100">
         <Navbar onMenuToggle={() => setMenuOpen(v => !v)} menuOpen={menuOpen} />
         <StaggeredMenu
           isFixed
           position="right"
           items={menuItems}
-          socialItems={socialItems}
           displaySocials
           displayItemNumbering={true}
           menuButtonColor="#000"
@@ -46,11 +44,15 @@ export default function App() {
           externalOpen={menuOpen}
           onMenuClose={() => setMenuOpen(false)}
         />
-        <div className="flex-1">
+        <div className="flex min-h-0 flex-1 flex-col">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/skills" element={<SkillsPage />} />
+            <Route path="/details" element={<Details />} />
+            <Route path="*" element={<Home />} />
+
+
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </div>

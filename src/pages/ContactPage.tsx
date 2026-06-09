@@ -32,7 +32,7 @@ export default function ContactPage() {
       <section className="mx-auto grid max-w-6xl gap-8 px-4 py-16 max-[380px]:px-3 lg:grid-cols-[1fr_1.1fr]">
         <div className="space-y-6">
           <p className="text-xs font-semibold uppercase tracking-[0.35em] text-zinc-500 dark:text-zinc-400">
-            <Link to="/" className="transition hover:text-zinc-950 dark:hover:text-white">
+            <Link to="/" className="cursor-target transition hover:text-zinc-950 dark:hover:text-white">
               Home
             </Link>
             <span className="mx-2 text-zinc-400 dark:text-zinc-500">/</span>
@@ -100,7 +100,7 @@ export default function ContactPage() {
 
             <button
               type="submit"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-zinc-950 px-5 py-3 text-sm font-medium text-white transition hover:bg-zinc-800 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200"
+              className="cursor-target inline-flex items-center justify-center gap-2 rounded-full bg-zinc-950 px-5 py-3 text-sm font-medium text-white transition hover:bg-zinc-800 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200"
             >
               <FaPaperPlane className="text-xs" />
               {status === "sending" ? "Sending..." : "Send message"}

@@ -593,7 +593,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
               closeMenu();
             }}
             aria-label="Close menu"
-            className="absolute top-4 right-4 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/10 hover:bg-black/20 text-black font-semibold text-sm transition-all duration-200 cursor-pointer"
+            className="cursor-target absolute top-4 right-4 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/10 hover:bg-black/20 text-black font-semibold text-sm transition-all duration-200 cursor-pointer"
             style={{ zIndex: 9999 }}
           >
             <FaTimes /> Close
@@ -611,7 +611,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
                     key={it.label + idx}
                   >
                     <Link
-                      className="sm-panel-item relative text-black font-semibold text-[4rem] cursor-pointer leading-none tracking-[-2px] uppercase transition-[background,color] duration-150 ease-linear inline-block no-underline pr-[1.4em]"
+                      className="cursor-target sm-panel-item relative text-black font-semibold text-[4rem] cursor-pointer leading-none tracking-[-2px] uppercase transition-[background,color] duration-150 ease-linear inline-block no-underline pr-[1.4em]"
                       to={it.link}
                       aria-label={it.ariaLabel}
                       data-index={idx + 1}

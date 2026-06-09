@@ -15,7 +15,7 @@ export default function SkillsPage() {
       <section className="mx-auto max-w-6xl px-4 py-16 max-[380px]:px-3">
         <div className="max-w-2xl">
           <p className="text-xs font-semibold uppercase tracking-[0.35em] text-zinc-500 dark:text-zinc-400">
-            <Link to="/" className="transition hover:text-zinc-950 dark:hover:text-white">
+            <Link to="/" className="cursor-target transition hover:text-zinc-950 dark:hover:text-white">
               Home
             </Link>
             <span className="mx-2 text-zinc-400 dark:text-zinc-500">/</span>
@@ -66,7 +66,7 @@ export default function SkillsPage() {
         <div className="mt-12 flex justify-start">
           <Link
             to="/projects"
-          className="inline-flex items-center gap-2 rounded-full border border-[#d6bea0] bg-[#f8ead8] px-5 py-3 text-sm font-medium text-zinc-900 transition hover:border-[#c9ae8d] hover:bg-[#f1dfca] dark:border-white/15 dark:bg-white/5 dark:text-white dark:hover:bg-white/10 max-[380px]:px-4 max-[380px]:py-2.5"
+          className="cursor-target inline-flex items-center gap-2 rounded-full border border-[#d6bea0] bg-[#f8ead8] px-5 py-3 text-sm font-medium text-zinc-900 transition hover:border-[#c9ae8d] hover:bg-[#f1dfca] dark:border-white/15 dark:bg-white/5 dark:text-white dark:hover:bg-white/10 max-[380px]:px-4 max-[380px]:py-2.5"
           >
             See projects
             <FaArrowRight className="text-xs" />
