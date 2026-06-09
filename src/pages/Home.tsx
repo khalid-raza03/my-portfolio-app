@@ -29,7 +29,6 @@ import ScrollReveal from "../components/ui/ScrollReveal";
 
 import BorderGlow from "./BorderGlow";
 import TiltedCard from "@/components/TiltedCard";
-import ScrollStack, { ScrollStackItem } from "@/components/ScrollStack";
 
 const scrollSections = [
   { id: "hero", title: "Intro" },

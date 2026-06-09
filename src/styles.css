@@ -30,12 +30,69 @@ h6 {
   color-scheme: dark;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
 @media screen and (max-width: 576px) {
-  .word{
+  .word {
     font-size: 20px;
   }
+}
+
+.swiper {
+  width: 95%;
+  height: 500px;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100% !important;
+  border-radius: 18px;
+  font-size: 22px;
+  height: 100%;
+  font-weight: bold;
+  color: #fff;
+}
+
+.swiper-slide:nth-child(1n) {
+  background-color: inherit;
+}
+
+.swiper-slide:nth-child(2n) {
+  background-color: inherit;
+}
+
+.swiper-slide:nth-child(3n) {
+  background-color: inherit;
+}
+
+.swiper-slide:nth-child(4n) {
+  background-color: inherit;
+}
+
+.swiper-slide:nth-child(5n) {
+  background-color: inherit;
+}
+
+.swiper-slide:nth-child(6n) {
+  background-color: inherit;
+}
+
+.swiper-slide:nth-child(7n) {
+  background-color: inherit;
+}
+
+.swiper-slide:nth-child(8n) {
+  background-color: inherit;
+}
+
+.swiper-slide:nth-child(9n) {
+  background-color: inherit;
+}
+
+.swiper-slide:nth-child(10n) {
+  background-color: inherit;
 }
