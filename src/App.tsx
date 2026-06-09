@@ -14,9 +14,10 @@ import Details from "./pages/Details";
 
 const menuItems = [
   { label: 'Home', ariaLabel: 'Go to home page', link: '/' },
-  { label: 'Projects', ariaLabel: 'Learn about us', link: '/projects' },
-  { label: 'Skills', ariaLabel: 'View our services', link: '/skills' },
+  { label: 'Projects', ariaLabel: 'Learn about my projects', link: '/projects' },
+  { label: 'Skills', ariaLabel: 'View my skills', link: '/skills' },
   { label: 'Contact', ariaLabel: 'Get in touch', link: '/contact' },
+  { label: 'About', ariaLabel: 'About me', link: '/details' }
 ];
 
 

@@ -2,6 +2,7 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FaMoon, FaSun, FaBars, FaTimes } from "react-icons/fa";
 import { useTheme } from "../context/ThemeContext";
+import { MorphingText } from "@/components/ui/morphing-text"
 
 interface NavbarProps {
   onMenuToggle: () => void;
@@ -21,14 +22,8 @@ export default function Navbar({ onMenuToggle, menuOpen }: NavbarProps) {
 
   return (
     <header className="sticky top-0 z-40 border-b border-[#dcc4a8]/70 bg-[#fff8ee]/85 backdrop-blur-xl dark:border-white/10 dark:bg-zinc-950/75">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-2 px-4 py-4 sm:gap-0 sm:py-6 max-[380px]:px-3 max-[380px]:py-3">
-        <div className="flex items-center gap-3">
-          <Link
-            to="/"
-            className="font-bold tracking-wide text-2xl text-zinc-950 dark:text-white sm:text-xl sm:tracking-tight max-[380px]:text-xl"
-          >
-            Khalid Raja
-          </Link>
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-2 px-4 py-4 sm:gap-0 sm:py-6 max-[380px]:px-3 max-[380px]:py-4">
+        <div className="flex items-center gap-x-6  w-1/2 justify-start">
           <button
             type="button"
             onClick={toggleTheme}
@@ -37,6 +32,14 @@ export default function Navbar({ onMenuToggle, menuOpen }: NavbarProps) {
           >
             {isDark ? <FaSun className="text-sm" /> : <FaMoon className="text-sm" />}
           </button>
+          <Link
+            to="/"
+            className="font-bold tracking-wide text-2xl text-zinc-950 dark:text-white sm:text-xl sm:tracking-tight max-[380px]:text-xl mt-3"
+          >
+            <MorphingText texts={["Khalid Raja", "Frontend Dev" , "React Dev"]} />
+            
+          </Link>
+        
         </div>
 
         <nav className="hidden sm:flex flex-wrap items-center gap-1 sm:justify-end sm:gap-2">
@@ -44,6 +47,7 @@ export default function Navbar({ onMenuToggle, menuOpen }: NavbarProps) {
           <NavLink to="/projects" className={linkClass}>Projects</NavLink>
           <NavLink to="/skills" className={linkClass}>Skills</NavLink>
           <NavLink to="/contact" className={linkClass}>Contact</NavLink>
+          <NavLink to="/details" className={linkClass}>About</NavLink>
         </nav>
 
         <button

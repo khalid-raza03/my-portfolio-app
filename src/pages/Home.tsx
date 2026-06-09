@@ -29,6 +29,7 @@ import ScrollReveal from "../components/ui/ScrollReveal";
 
 import BorderGlow from "./BorderGlow";
 import TiltedCard from "@/components/TiltedCard";
+import { MorphingText } from "@/components/ui/morphing-text"
 
 const scrollSections = [
   { id: "hero", title: "Intro" },
@@ -138,7 +139,7 @@ export default function Home() {
 
                    <Link
                     to="/details"
-                    className="cursor-target mt-10 mb-0 inline-flex items-center gap-2 rounded-full border border-[#d6bea0] px-5 py-3 text-sm font-medium bg-black dark:bg-white  text-white transition hover:border-[#c9ae8d] hover:bg-[#f1dfca] dark:border-white/10 dark:text-black dark:hover:bg-black/10 max-[380px]:w-fit lg:hidden   max-[380px]:justify-center max-[380px]:px-4 max-[380px]:py-2.5"
+                    className="cursor-target mt-10 mb-0 inline-flex items-center gap-2 rounded-full border border-[#d6bea0] px-5 py-3 text-sm font-medium bg-black dark:bg-white  text-white transition hover:border-[#c9ae8d] hover:bg-[#f1dfca] dark:border-white/10 dark:text-black dark:hover:scale-90 max-[380px]:w-fit lg:hidden   max-[380px]:justify-center max-[380px]:px-4 max-[380px]:py-2.5"
                   >
                     About Me
                     <FaArrowRight size={"14"} />

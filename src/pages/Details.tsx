@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCards } from "swiper/modules";
+import { EffectCards, Navigation } from "swiper/modules";
+import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import {
@@ -20,6 +21,7 @@ import { Link } from "react-router-dom";
 
 const Details = () => {
   const calcAge = new Date().getFullYear() - 2002;
+  const swiperRef = useRef<SwiperType | null>(null);
 
   return (
     <>
@@ -42,7 +44,8 @@ const Details = () => {
         <Swiper
           effect="cards"
           grabCursor={true}
-          modules={[EffectCards]}
+          modules={[EffectCards, Navigation]}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
           className="w-full"
         >
           {/* ── Slide 1: Profile ── */}
@@ -216,7 +219,23 @@ const Details = () => {
           </SwiperSlide>
         </Swiper>
 
-       
+        {/* Navigation Arrows */}
+        <div className="mt-8 flex items-center justify-center gap-4">
+          <button
+            onClick={() => swiperRef.current?.slidePrev()}
+            className="cursor-target flex h-12 w-12 items-center justify-center rounded-full border border-[#dcc4a8] bg-[#f8ead8] text-zinc-900 transition hover:bg-[#e5cbab] dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:bg-white/10"
+            aria-label="Previous slide"
+          >
+            <FaArrowLeft size={18} />
+          </button>
+          <button
+            onClick={() => swiperRef.current?.slideNext()}
+            className="cursor-target flex h-12 w-12 items-center justify-center rounded-full border border-[#dcc4a8] bg-[#f8ead8] text-zinc-900 transition hover:bg-[#e5cbab] dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:bg-white/10"
+            aria-label="Next slide"
+          >
+            <FaArrowRight size={18} />
+          </button>
+        </div>
       </section>
     </main>
 
