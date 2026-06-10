@@ -29,7 +29,7 @@ export default function ContactPage() {
 
   return (
     <main className="bg-[radial-gradient(circle_at_top,_rgba(120,119,198,0.08),_transparent_40%),linear-gradient(180deg,_#fffaf3_0%,_#f5e8da_100%)] text-zinc-900 transition-colors duration-300 dark:bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.06),_transparent_35%),linear-gradient(180deg,_#09090b_0%,_#111113_100%)] dark:text-zinc-100">
-      <section className="mx-auto grid max-w-6xl gap-8 px-4 py-16 max-[380px]:px-3 lg:grid-cols-[1fr_1.1fr]">
+      <section className="mx-auto grid max-w-6xl gap-8 px-4 py-16 max-[380px]:px-3 lg:grid-cols-[1fr_1.1fr] mt-12">
         <div className="space-y-6">
           <p className="text-xs font-semibold uppercase tracking-[0.35em] text-zinc-500 dark:text-zinc-400">
             <Link to="/" className="cursor-target transition hover:text-zinc-950 dark:hover:text-white">

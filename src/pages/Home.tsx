@@ -107,7 +107,7 @@ export default function Home() {
   return (
     <main className="bg-[radial-gradient(circle_at_top,rgba(120,119,198,0.08),transparent_40%),linear-gradient(180deg,#fffaf3_0%,#f5e8da_100%)] text-zinc-900 transition-colors duration-300 dark:bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.06),transparent_35%),linear-gradient(180deg,#09090b_0%,#111113_100%)] dark:text-zinc-100">
       <ScrollToTop />
-      <section className="mx-auto max-w-7xl px-4 py-16 max-[380px]:px-3">
+      <section className="mx-auto max-w-7xl px-4 py-16 max-[380px]:px-3 mt-22 min-h-screen">
         <div className="grid gap-10 ">
           <div className="space-y-8">
             <section
@@ -124,8 +124,8 @@ export default function Home() {
                     <FaCloud className="text-xs" /> Frontend Developer &
                     Designer
                   </p>
-                  <h2 className="text-2xl font-semibold tracking-tight text-zinc-950 dark:text-white lg:inline-block hidden sm:text-4xl md:text-6xl max-[380px]:text-xl max-w-3xl">
-                    Building calm, modern interfaces for thoughtful products.
+                  <h2 className="text-2xl font-semibold tracking-wide leading-normal text-zinc-950 dark:text-white lg:inline-block hidden sm:text-4xl md:text-6xl max-[380px]:text-xl max-w-3xl">
+                    Developing, visually appealing modern interfaces.
                   </h2>
                   
                   <div className="flex items-center gap-2">

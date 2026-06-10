@@ -26,12 +26,12 @@ const Details = () => {
   return (
     <>
       <main className="bg-[radial-gradient(circle_at_top,rgba(120,119,198,0.08),transparent_40%),linear-gradient(180deg,#fffaf3_0%,#f5e8da_100%)] text-zinc-900 transition-colors duration-300 dark:bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.06),transparent_35%),linear-gradient(180deg,#09090b_0%,#111113_100%)] dark:text-zinc-100 lg:hidden block">
-      <section className="mx-auto max-w-[90%] px-4 py-16 sm:max-w-md">
+      <section className="mx-auto max-w-[90%] px-4 py-16 sm:max-w-md min-h-screen mt-16">
  {/* Swipe hint */}
   <p className="text-xs mb-4 font-semibold uppercase tracking-[0.35em] text-zinc-500 dark:text-zinc-400">
              <Link
                to="/"
-               className="cursor-target transition hover:text-zinc-950 dark:hover:text-white text-slate-800 font-bold"
+               className="cursor-target transition hover:text-zinc-950 dark:hover:text-white text-slate-800 dark:text-slate-500 font-bold"
              >
                Home
              </Link>

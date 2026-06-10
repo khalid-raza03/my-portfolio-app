@@ -1,15 +1,15 @@
 export const skills = [
   {
     title: "Languages",
-    items: ["TypeScript", "JavaScript", "SQL", "Python", "C++"],
+    items: ["TypeScript", "JavaScript", "SQL", "Python", "C++" , "HTML5"],
   },
   {
-    title: "Frameworks",
-    items: ["React", "Tailwind CSS", "Bootstrap", "Material UI", "SCSS"],
+    title: "Frameworks & Libraries",
+    items: ["React", "Next.js", "Tailwind CSS", "Bootstrap css", "Material UI", "ShadCn UI", "SCSS"],
   },
   {
-    title: "Tools",
-    items: ["Figma", "Git", "GitHub", "VS Code", "Canva"],
+    title: "General & AI Tools",
+    items: ["Figma", "Git", "GitHub", "VS Code",  "AntiGravity" , "Chrome Dev Tools" , "Claude" , "Codex", "Cursor AI"],
   },
 ];
 
